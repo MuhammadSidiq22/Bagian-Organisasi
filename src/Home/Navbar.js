@@ -3,11 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../css/Carousel.css';
+import '../css/Style.css';
 
-import '../css/Navbar.css';
-
-function Header() {
+function Navigasi() {
  return (
     <>
     <Container fluid="md" className='Nav'>
@@ -16,20 +14,20 @@ function Header() {
         <Col>
     <Navbar bg="light" variant="light" className='header'>
       <Container>
-        <img src='https://img2.pngdownload.id/20180715/chh/kisspng-business-organization-project-plan-innovation-trabajo-en-equipo-5b4b6c93d35b62.5049096415316696518657.jpg' width={80} height={70}></img>&nbsp;
+        <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' width={80} height={100}></img>&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand href="#home" className='font'>HOME</Navbar.Brand>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Nav className="me-auto">
-          <Nav.Link href="#home">PROFIL SKPD</Nav.Link>
+          <Nav.Link href="#home" className='font'>PROFIL SKPD</Nav.Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Nav.Link href="#features">INFORMASI</Nav.Link>
+          <Nav.Link href="#features" className='font'>INFORMASI</Nav.Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Nav.Link href="#pricing">GALERY</Nav.Link>
+          <Nav.Link href="../Galeri/Galeri.js" className='font'>GALERY</Nav.Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Nav.Link href="#pricing">NEWS</Nav.Link>
+          <Nav.Link href="#pricing" className='font'>NEWS</Nav.Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Nav.Link href="#pricing">CONTACT US</Nav.Link>
+          <Nav.Link href="#pricing" className='font'>CONTACT US</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
@@ -40,4 +38,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navigasi;

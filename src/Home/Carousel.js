@@ -2,24 +2,24 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../css/Carousel.css';
+import '../css/Style.css';
 
 function Caurosel() {
   return (
-    <Container fluid="md" className='carousel'>
+    <Container fluid="md">
       <br></br>
     <Row>
       <Col>
-      <Carousel>
+      <Carousel fade>
       <Carousel.Item>
         <img
           width={1348}
           height={544}
           className="d-block w-100"
-          src="https://news.unair.ac.id/wp-content/uploads/2020/04/kinerja-organisasi.jpg"
+          src="https://mediajagoan.com/wp-content/uploads/2021/04/20210429_112406.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption className='carousel'>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
@@ -29,7 +29,7 @@ function Caurosel() {
           width={1348}
           height={544}
           className="d-block w-100"
-          src="https://asset.kompas.com/crops/_XxrAFmUf3KjsVAeqEd_aXbxfy4=/0x0:7500x5000/750x500/data/photo/2021/09/02/61306471d228e.jpg"
+          src="https://1.bp.blogspot.com/-s9b-25d9IRM/X8B3b_oWvRI/AAAAAAAA170/yhNcqMdebZQnKz4z08aUHsQDaZe9Xj7wgCLcBGAsYHQ/s1280/Pemerintah%2BTulang%2BBawang%2BTerima%2BPenghargaan%2BWTP%2B6%2BKali%2BBerturut-turut.jpg"
           alt="Second slide"
         />
 
@@ -43,7 +43,7 @@ function Caurosel() {
           width={1348}
           height={544}        
           className="d-block w-100"
-          src="https://www.dictio.id/uploads/db3342/original/3X/a/e/ae02e15cd8c15e1a9cacd7cabf468830f1aaf6a0.png"
+          src="https://cdn-2.tstatic.net/lampung/foto/bank/images/Harapan-Pj-Bupati-Mesuji-Sulpakar-kepada-Dandim-0426Tulang-Bawang-yang-baru.jpg"
           alt="Third slide"
         />
 

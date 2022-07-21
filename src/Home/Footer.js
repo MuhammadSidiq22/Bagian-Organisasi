@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
-import '../css/Footer.css';
+import '../css/Style.css';
 
 function Footer() {
   return (
@@ -12,6 +12,11 @@ function Footer() {
                 <br></br>
                 <br></br>
                 <br></br>
+_______________________________________________________________________________________________________________________________________________________________________
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>                
       <Row>
         <Col>
 
