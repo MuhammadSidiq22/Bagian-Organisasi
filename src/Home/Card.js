@@ -38,8 +38,8 @@ function Card1() {
       <br></br>
       <Row>
         <Col xs={12} md={8}>
-        <CardGroup className='card'>
-      <Card>
+        <CardGroup>
+      <Card className='card'>
         <Card.Img variant="top" src="https://www.talenta.co/wp-content/uploads/2022/03/organisasi-perusahaan.jpg" />
         <Card.Body>
           <Card.Title>Card title</Card.Title>

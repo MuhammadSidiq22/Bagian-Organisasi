@@ -13,8 +13,7 @@ function Caurosel() {
       <Carousel fade>
       <Carousel.Item>
         <img
-          width={1348}
-          height={544}
+
           className="d-block w-100"
           src="https://mediajagoan.com/wp-content/uploads/2021/04/20210429_112406.jpg"
           alt="First slide"
@@ -26,8 +25,7 @@ function Caurosel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          width={1348}
-          height={544}
+
           className="d-block w-100"
           src="https://1.bp.blogspot.com/-s9b-25d9IRM/X8B3b_oWvRI/AAAAAAAA170/yhNcqMdebZQnKz4z08aUHsQDaZe9Xj7wgCLcBGAsYHQ/s1280/Pemerintah%2BTulang%2BBawang%2BTerima%2BPenghargaan%2BWTP%2B6%2BKali%2BBerturut-turut.jpg"
           alt="Second slide"
@@ -40,8 +38,7 @@ function Caurosel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          width={1348}
-          height={544}        
+        
           className="d-block w-100"
           src="https://cdn-2.tstatic.net/lampung/foto/bank/images/Harapan-Pj-Bupati-Mesuji-Sulpakar-kepada-Dandim-0426Tulang-Bawang-yang-baru.jpg"
           alt="Third slide"
