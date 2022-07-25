@@ -1,9 +1,9 @@
-import Caurosel from './Home/Carousel';
-import Navigasi from './Home/Navbar';
-import Card1 from './Home/Card';
-import Artikel from './Home/Lainnya';
-import Galeri from './Home/Galeri';
-import Footer from './Home/Footer';
+import Caurosel from './Component/Carousel';
+import Navigasi from './Component/Navbar';
+import Card1 from './Component/Card';
+import Artikel from './Component/Lainnya';
+import Galeri from './Component/Galeri';
+import Footer from './Component/Footer';
 
 function App() {
   return (
