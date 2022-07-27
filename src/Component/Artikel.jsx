@@ -1,22 +1,16 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
 
 function Card1() {
   return (
     <div className='container-fluid py-5'>
         <div className='container'>
-            <Navbar expand="lg" variant="light" bg="light">
-                <div className='container'>
-                <Navbar.Brand href="#" className='fontbold'>Artikel Terbaru</Navbar.Brand>
-                </div>
-            </Navbar>
+             Artikel Terbaru
         </div>
+    <div className='container'>
         <div className='row py-5'>
-            <div className='col-lg-6  col-md-5 col-sm-12'>
+            <div className='col-lg-6  col-md-12'>
                 <Card>
                     <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
                     <Card.Body>
@@ -24,6 +18,7 @@ function Card1() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
+                    <Button variant="outline-success">Success</Button>{' '}
                     </Card.Body>
                 </Card>
                 <Card className='mt-4'>
@@ -33,6 +28,7 @@ function Card1() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
+                    <Button variant="outline-success">Success</Button>{' '}
                     </Card.Body>
                 </Card>
                 <Card className='mt-4'>
@@ -42,10 +38,11 @@ function Card1() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
+                    <Button variant="outline-success">Success</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>
-            <div className='col-lg-6  col-md-5 col-sm-12 mt-4'>
+            <div className='col-lg-6 col-md-12'>
                   <Card.Header>Featured</Card.Header>
                     <Card>
                         <Card.Body>This is some text within a card body.</Card.Body>
@@ -63,6 +60,20 @@ function Card1() {
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>
+                    <Card className='mb-5'>
+                        <Card.Body>This is some text within a card body.</Card.Body>
+                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
+                    </Card>
+
+                    <Card.Header className='mt-5'>Featured</Card.Header>
+                    <Card>
+                        <Card.Body>This is some text within a card body.</Card.Body>
+                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
+                    </Card>
+                    <Card>
+                        <Card.Body>This is some text within a card body.</Card.Body>
+                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
+                    </Card>
                     <Card>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
@@ -70,6 +81,7 @@ function Card1() {
             </div>
         </div>
     </div>
+</div>  
   );
 }
 
