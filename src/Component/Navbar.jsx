@@ -7,7 +7,7 @@ import '../css/Style.css';
 function Navigasi() {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className="justify-content-end flex-grow-1 pe-3">
-      <div className='container'>
+      <div className='nav container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' width={70} height={90}></img>
         <Navbar.Collapse id="basic-navbar-nav">

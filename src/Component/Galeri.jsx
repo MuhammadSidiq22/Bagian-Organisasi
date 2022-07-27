@@ -6,11 +6,11 @@ import '../css/Style.css';
 function Galeri() {
   return (
     <div className='container-fluid py-5'>
-        <div className='container'>
+        <div className='sub container'>
             Galeri Kegiatan
         </div>
     <div className='container'>
-        <div className='row py-5'>
+        <div className='isi row py-5'>
             <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
                 <Card>
                     <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />

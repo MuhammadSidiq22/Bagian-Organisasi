@@ -5,6 +5,7 @@ import '../css/Style.css';
 function Caurosel() {
   return (
     <div className='container-fluid py-5'>
+        <div className='container'>
         <div className='row'>
             <div className='col-12'>
                 <Carousel fade>
@@ -50,6 +51,7 @@ function Caurosel() {
                 </Carousel.Item>
                 </Carousel>
             </div>
+        </div>
         </div>
     </div>
   );

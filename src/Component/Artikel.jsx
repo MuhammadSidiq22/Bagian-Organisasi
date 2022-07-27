@@ -5,12 +5,12 @@ import '../css/Style.css';
 function Card1() {
   return (
     <div className='container-fluid py-5'>
-        <div className='container'>
+        <div className='sub container'>
              Artikel Terbaru
         </div>
     <div className='container'>
         <div className='row py-5'>
-            <div className='col-lg-6  col-md-12'>
+            <div className='isi col-lg-6  col-md-12'>
                 <Card>
                     <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
                     <Card.Body>
@@ -42,9 +42,9 @@ function Card1() {
                     </Card.Body>
                 </Card>
             </div>
-            <div className='col-lg-6 col-md-12'>
-                  <Card.Header>Featured</Card.Header>
-                    <Card>
+            <div className='isi col-lg-6 col-md-12'>
+                  <Card.Header className='sub'>Featured</Card.Header>
+                    <Card className='mt-3'>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>
@@ -65,8 +65,8 @@ function Card1() {
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>
 
-                    <Card.Header className='mt-5'>Featured</Card.Header>
-                    <Card>
+                    <Card.Header className='sub mt-5'>Featured</Card.Header>
+                    <Card className='mt-3'>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>

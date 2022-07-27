@@ -10,7 +10,7 @@ function Berita() {
             Berita Terbaru
         </div>
             <div className='container'>
-            <div className='row'>
+            <div className='isi row'>
                 <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
                     <Card className='mt-4'>
                         <Card.Img variant="top" src="https://png.pngtree.com/thumb_back/fh260/background/20211014/pngtree-television-news-background-image_909008.png" />
@@ -47,9 +47,9 @@ function Berita() {
                         </Card.Body>
                     </Card>
                     </div>
-                <div className='col-lg-3 col-md-12 mt-4'>
-                    <Card.Header>Featured</Card.Header>
-                    <Card>
+                <div className='isi col-lg-3 col-md-12 mt-4'>
+                    <Card.Header className='sub'>Featured</Card.Header>
+                    <Card className='mt-3'>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>
