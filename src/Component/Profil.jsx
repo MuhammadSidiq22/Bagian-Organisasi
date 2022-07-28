@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Figure from 'react-bootstrap/Figure';
+import '../css/Style.css';
 
 function Poto() {
   return (
     <div className='container-fluid py-10 text-center'>
-      <div className='container'>
-        <div className='container'>
+      <div className='sub container'>
+        Ketua Divisi
+      </div>
+      <div className='container mt-5'>
+        <div className='container sub'>
                 <Figure>
                 <Figure.Image
                     width={191}

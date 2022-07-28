@@ -1,13 +1,14 @@
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
 import Pagination from 'react-bootstrap/Pagination';
 
 function Detberita() {
   return (
-    <div className='container-fluid py-1'>
+    <div className='isi container-fluid py-1'>
         <div className='row'>
             <div className='col-12'>
                 <Carousel fade>
@@ -91,7 +92,17 @@ function Detberita() {
                 </Card>
             </div>
             <div className='col-lg-6 col-md-12'>
-                  <Card.Header>Featured</Card.Header>
+                        <Form className="d-flex">
+                        <Form.Control
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="outline-success">Search</Button>
+                    </Form>
+
+                  <Card.Header className='mt-5'>Featured</Card.Header>
                     <Card>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>

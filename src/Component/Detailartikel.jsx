@@ -1,12 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
 
 function Detartikel() {
   return (
-    <div className='container-fluid py-5'>
+    <div className='isi container-fluid py-5'>
             <div className='col-12'>
                 <Carousel fade>
                 <Carousel.Item>
@@ -90,7 +91,17 @@ function Detartikel() {
                     </Card>
                 </div>
                 <div className='col-lg-3 col-md-12 mt-4'>
-                    <Card.Header>Featured</Card.Header>
+                    <Form className="d-flex">
+                    <Form.Control
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="outline-success">Search</Button>
+                    </Form>
+
+                    <Card.Header className='mt-5'>Featured</Card.Header>
                     <Card>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>

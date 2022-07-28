@@ -10,15 +10,16 @@ function Navigasi() {
       <div className='nav container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' width={70} height={90}></img>
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="/Berita">Berita</Nav.Link>
             <Nav.Link href="/Artikel">Artikel</Nav.Link>
-            <Nav.Link href="#link">Dokumen</Nav.Link>
+            <Nav.Link href="/Dokumen">Dokumen</Nav.Link>
             <NavDropdown title="Galeri" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Foto</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Vidio</NavDropdown.Item>
+              <NavDropdown.Item href="/Foto">Foto</NavDropdown.Item>
+              <NavDropdown.Item href="/Vidio">Vidio</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link">Halaman Statis</Nav.Link>
           </Nav>
