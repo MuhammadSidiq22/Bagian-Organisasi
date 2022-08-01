@@ -3,7 +3,7 @@ import '../css/Style.css';
 
 function Foot() {
   return (
-    <div className='Foot main-footer'>
+    <div className='Foot main-footer mt-5'>
       <div className='container'>
         <div className='row'>
           <div className='col'>

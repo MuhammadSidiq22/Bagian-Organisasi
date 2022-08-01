@@ -15,7 +15,8 @@ const Home = () => {
           <div>
                 <Navigasi />
           </div>
-          <div>
+          <br></br>
+          <div className='mt-5'>
                 <Caurosel />
           </div>
           <div>

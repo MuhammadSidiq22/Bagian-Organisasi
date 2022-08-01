@@ -6,8 +6,17 @@ import '../css/Style.css';
 function Galeri() {
   return (
     <div className='container-fluid py-5'>
-        <div className='sub container'>
-            Galeri Kegiatan
+        <div className='container'>
+            <div className='sub row'>
+                <div className='col-lg-6  col-md-12'>
+                    Galeri Kegiatan
+                </div>
+                <div className='col-lg-6  col-md-12 text-end'>
+                <Button variant="outline-success" size="sm">
+                >>Lihat semua
+                </Button>
+                </div>
+            </div>
         </div>
     <div className='container'>
         <div className='isi row py-5'>
@@ -19,7 +28,7 @@ function Galeri() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
+                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>
@@ -31,7 +40,7 @@ function Galeri() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
+                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>
@@ -43,7 +52,7 @@ function Galeri() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
+                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>
@@ -55,7 +64,7 @@ function Galeri() {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
+                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>

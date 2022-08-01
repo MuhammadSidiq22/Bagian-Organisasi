@@ -1,7 +1,6 @@
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import React from 'react'
 
 function Dokumen() {
@@ -25,9 +24,41 @@ function Dokumen() {
                 </Carousel>
             </div>
         </div>
+        <div className='row'>
+          <div className='col-12'>
+                    <Card className='mt-3'>
+                      <Card.Body>This is some text within a card body.</Card.Body>
+                      <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
+                    </Card>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+                    <Card className='mt-3'>
+                      <Card.Body>This is some text within a card body.</Card.Body>
+                      <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
+                    </Card>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+            
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+            
+          </div>
+        </div>
+
 
     </div>
   )
 }
 
-export default Dokumen
+export default Dokumen;

@@ -1,88 +1,81 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
+import react, {useState, useEffect, Fragment} from 'react'
 
-function Card1() {
-  return (
-    <div className='container-fluid py-5'>
-        <div className='sub container'>
-             Artikel Terbaru
-        </div>
-    <div className='container'>
-        <div className='row py-5'>
-            <div className='isi col-lg-6  col-md-12'>
-                <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-                <Card className='mt-4'>
-                    <Card.Img variant="top" src="https://asset-a.grid.id/crop/0x100:1080x801/x/photo/2020/02/07/167159773.jpg" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-                <Card className='mt-4'>
-                    <Card.Img variant="top" src="https://png.pngtree.com/thumb_back/fh260/background/20211014/pngtree-television-news-background-image_909008.png" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='isi col-lg-6 col-md-12'>
-                  <Card.Header className='sub'>Featured</Card.Header>
+function Artikel() {
+    const [DataArtikel, setDataArtikel] = useState(null);
+
+
+    useEffect(() => {
+        getArtikel();
+        return () => {
+            setDataArtikel(null);
+        }
+      }, [])
+
+
+      function getArtikel(){
+        const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=4').then(function (response) {
+        setDataArtikel(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+    }
+    
+
+    return (
+        <>
+          {
+            (DataArtikel != null) ?
+              <div className="container-main mt-5">
+                <div className="container">
+                    <div className="row">
+                    <div className='sub col-lg-6  col-md-6 col-sm-6'>
+                        Artikel Terbaru__
+                    </div>
+                    <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+                    <Button variant="outline-success" size="sm">
+                    >>Lihat semua
+                    </Button>
+                    </div>
+                    
+            {
+              DataArtikel 
+              && DataArtikel.map((item, index) => {
+                return (
+                            <div className=' col-md-6 col-sm-12'>
+                                <Card className='mt-4'>
+                                    <Card.Img variant="top" src={item.image_file_data} />
+                                    <Card.Body>
+                                    <Card.Title>{item.title}</Card.Title>
+                                    <Card.Text>
+                                            {item.content}
+                                    </Card.Text>
+                                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                )
+              })
+            }
+            <div className="col=lg-6">
+                    <Card.Header className='sub mt-4'>Artikel Populer</Card.Header>
                     <Card className='mt-3'>
                         <Card.Body>This is some text within a card body.</Card.Body>
                         <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
                     </Card>
-                    <Card>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-                    <Card>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-                    <Card>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-                    <Card className='mb-5'>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-
-                    <Card.Header className='sub mt-5'>Featured</Card.Header>
-                    <Card className='mt-3'>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-                    <Card>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-                    <Card>
-                        <Card.Body>This is some text within a card body.</Card.Body>
-                        <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
             </div>
-        </div>
-    </div>
-</div>  
-  );
-}
+                    </div>
+                </div>
+            </div>: ''
+          }
+        
+        </>
+      );
+    }
 
-export default Card1;
+export default Artikel;

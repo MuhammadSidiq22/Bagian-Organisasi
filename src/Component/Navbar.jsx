@@ -21,7 +21,7 @@ function Navigasi() {
               <NavDropdown.Item href="/Foto">Foto</NavDropdown.Item>
               <NavDropdown.Item href="/Vidio">Vidio</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Halaman Statis</Nav.Link>
+            <Nav.Link href="/HalamanStatis">Halaman Statis</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         </div>
