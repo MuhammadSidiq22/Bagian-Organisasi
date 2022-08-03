@@ -1,0 +1,29 @@
+.p{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+.p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cont{
+    padding: 2px 16px
+}
+
+.font{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+}
+
+.img{
+    width: 300px;
+    height: 300px;
+}
+
+.bg{
+    background-color: #F5FFFA;
+    padding: 100px 100px;
+}

@@ -1,76 +1,72 @@
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
+import react, {useState, useEffect, Fragment} from 'react'
 
 function Galeri() {
+    const [DataGaleri, setDataGaleri] = useState(null);
+
+    useEffect(() => {
+      getGaleri();
+      return () => {
+        setDataGaleri(null);
+      }
+    }, [])
+
+    function getGaleri(){
+        const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=4').then(function (response) {
+        setDataGaleri(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+    }
+    
+
   return (
-    <div className='container-fluid py-5'>
-        <div className='container'>
-            <div className='sub row'>
-                <div className='col-lg-6  col-md-12'>
-                    Galeri Kegiatan
+    <>
+      {
+        (DataGaleri != null) ?
+          <div className="container-main mt-5">
+            <div className="container">
+                <div className="row">
+                <div className='sub col-lg-6  col-md-6 col-sm-6'>
+                    Galeri Kegiatan__
                 </div>
-                <div className='col-lg-6  col-md-12 text-end'>
+                <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
                 <Button variant="outline-success" size="sm">
                 >>Lihat semua
                 </Button>
                 </div>
+                
+        {
+          DataGaleri 
+          && DataGaleri.map((item, index) => {
+            return (
+                        <div className='col-lg-3 col-md-6 col-sm-12'>
+                            <Card className='mt-4'>
+                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Body>
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>
+                                        {item.content}
+                                </Card.Text>
+                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                </Card.Body>
+                            </Card>
+                        </div>
+            )
+          })
+        }
+                </div>
             </div>
-        </div>
-    <div className='container'>
-        <div className='isi row py-5'>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                 <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                 <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-        </div>
-     </div>
-    </div>
+        </div>: ''
+      }
+    
+    </>
   );
 }
 

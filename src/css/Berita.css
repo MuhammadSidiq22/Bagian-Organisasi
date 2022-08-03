@@ -1,0 +1,16 @@
+.font{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    line-height: 22.5px;
+}
+
+.image-berita{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.bg{
+    background-color: #F5FFFA;
+    padding: 100px 100px;
+}

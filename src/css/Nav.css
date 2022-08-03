@@ -1,0 +1,19 @@
+.nav{
+    font-family: 'Sintony', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    padding: 14px 16px;
+}
+
+.effect{
+    display: block;
+    text-decoration: none;
+}
+
+.effect:hover:not(.active) {
+  background-color: whitesmoke;
+}
+
+.bg-nav{
+  background-color: #F5FFFA;
+}

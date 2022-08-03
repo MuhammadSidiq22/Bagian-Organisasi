@@ -1,5 +1,9 @@
 import React from 'react'
-import '../css/Style.css';
+import '../css/Footer.css';
+import bg from '../asset/logo/facebook.png';
+import bg1 from '../asset/logo/whatsapp.png';
+import bg2 from '../asset/logo/instagram.png';
+import bg3 from '../asset/logo/youtube.png';
 
 function Foot() {
   return (
@@ -7,18 +11,28 @@ function Foot() {
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            <h4>
-              <img src=''></img>
-            </h4>
+            <h5>
+            Hubungi Kami :
+            </h5>
             <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos autem in cumque dignissimos tempore ea voluptate quis doloribus pariatur laborum?
+              <img src={bg}
+              width={40}></img>&nbsp;
+              Facebook Kami
             </p>
             <p>
-              Hubungi Kami :
+              <img src={bg1}
+              width={40}></img>&nbsp;
+              Whatsapp kami
             </p>
             <p>
-              <img src='https://spng.pngfind.com/pngs/s/681-6813052_facebook-and-instagram-icon-png-transparent-png.png'
-              width={80}></img>
+              <img src={bg2}
+              width={40}></img>&nbsp;
+              Instagram Kami
+            </p>
+            <p>
+              <img src={bg3}
+              width={40}></img>&nbsp;
+              Youtube Kami
             </p>
           </div>
           <div className='col'>
@@ -40,9 +54,10 @@ function Foot() {
         </div>
       </div>
       <div className='container'>
+      <hr />
           <div className='row'>
             <p className='col-sm text center'>
-              &copy;{new Date().getFullYear}Bagian Organisasi Tulang Bawang.
+              &copy;{new Date().getFullYear()} Bagian Organisasi Tulang Bawang.
             </p>
           </div>
         </div>

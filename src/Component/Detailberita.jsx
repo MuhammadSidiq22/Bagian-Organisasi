@@ -53,6 +53,17 @@ function Detberita() {
                                     </Carousel>
                                 </div>
                             </div>
+                            <div className="container">
+                            <Form className="d-flex mt-5">
+                            <Form.Control
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                            />
+                            <Button variant="outline-success">Search</Button>
+                            </Form>
+                            </div>
                     {
                         DataDetberita 
                         && DataDetberita.map((item, index) => {
@@ -74,6 +85,16 @@ function Detberita() {
                         )
                         })
                     }
+                        <div className="container mt-5">
+                        <Pagination>
+                        <Pagination.First />
+                        <Pagination.Prev />
+                        <Pagination.Item active>{1}</Pagination.Item>
+                        <Pagination.Item>{2}</Pagination.Item>
+                        <Pagination.Next />
+                        <Pagination.Last />
+                        </Pagination>
+                        </div>
       </div>: ''
     }
   

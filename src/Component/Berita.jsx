@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import '../css/Style.css';
+import '../css/Berita.css';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Berita() {
@@ -30,10 +30,10 @@ function Berita() {
     <>
       {
         (DataBerita != null) ?
-          <div className="container-main">
+          <div className="bg container-main">
             <div className="container">
                 <div className="row">
-                <div className='sub col-lg-6  col-md-6 col-sm-6'>
+                <div className='font col-lg-6  col-md-6 col-sm-6'>
                     Berita Terbaru__
                 </div>
                 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
@@ -48,7 +48,7 @@ function Berita() {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Img variant="top" className='image-berita' src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
