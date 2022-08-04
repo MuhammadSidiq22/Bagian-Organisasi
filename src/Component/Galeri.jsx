@@ -34,10 +34,10 @@ function Galeri() {
             <div className="container">
                 <div className="row">
                 <div className='sub col-lg-6  col-md-6 col-sm-6'>
-                    Galeri Kegiatan__
+                    Galeri Foto__
                 </div>
                 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
-                <Button variant="outline-success" size="sm">
+                <Button variant="outline-success" size="sm" href='/Foto'>
                 >>Lihat semua
                 </Button>
                 </div>

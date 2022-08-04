@@ -28,7 +28,7 @@ const Home = () => {
           <div>
                 <Poto />
           </div>
-          <div>
+          <div className='mb-5'>
                 <Galeri />
           </div>
         </div>

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import '../css/Style.css';
+import '../css/Detailartikel.css';
 import Pagination from 'react-bootstrap/Pagination';
 import react, {useState, useEffect, Fragment} from 'react'
 
@@ -34,7 +34,7 @@ function Detartikel() {
                 <>
                 {
                     (DataDetartikel != null) ?
-                    <div className="container-main mt-5">
+                    <div className="container-main">
                         <div className="row">
                                     <Carousel fade>
                                     <Carousel.Item>
@@ -50,16 +50,17 @@ function Detartikel() {
                                     </Carousel.Item>
                                     </Carousel>
                                 </div>
+                                <div className="bg container-fluid">
                                 <div className="container">
-                            <Form className="d-flex mt-5">
-                            <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                            </Form>
+                                    <Form className="d-flex mt-5">
+                                    <Form.Control
+                                        type="search"
+                                        placeholder="Search"
+                                        className="me-2"
+                                        aria-label="Search"
+                                    />
+                                    <Button variant="outline-success">Search</Button>
+                                    </Form>
                             
                     {
                         DataDetartikel 
@@ -91,6 +92,7 @@ function Detartikel() {
                         </Pagination>
                         </div>
                     </div>
+                </div>
       </div>: ''
     }
   

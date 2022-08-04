@@ -38,7 +38,7 @@ function Artikel() {
                         Artikel Terbaru__
                     </div>
                     <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
-                    <Button variant="outline-success" size="sm">
+                    <Button variant="outline-success" size="sm" href='/Artikel'>
                     >>Lihat semua
                     </Button>
                     </div>
