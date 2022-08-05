@@ -1,64 +1,92 @@
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
-import React from 'react'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import '../css/Dokumen.css';
+import react, {useState, useEffect, Fragment} from 'react'
 
 function Dokumen() {
-  return (
-    <div className='isi container-fluid'>
-        <div className='row'>
-            <div className='col-12'>
-                <Carousel fade>
-                <Carousel.Item>
-                    <img
-
-                    className="d-block w-100"
-                    src="https://i.pinimg.com/564x/ac/b9/72/acb972a99cadb2b1b311ae24788cfd6a.jpg"
-                    alt="First slide"
-                    />
-                    <Carousel.Caption className='carousel'>
-                    <h3>Dokumen</h3>
-                    <p>Beranda>Halaman Dokumen</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                </Carousel>
-            </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-                    <Card className='mt-3'>
-                      <Card.Body>This is some text within a card body.</Card.Body>
-                      <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-                    <Card className='mt-3'>
-                      <Card.Body>This is some text within a card body.</Card.Body>
-                      <Card.Link href="#" className='text-end'>Selengkapnya</Card.Link>
-                    </Card>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-            
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-            
-          </div>
-        </div>
+    const [DataDokumen, setDataDokumen] = useState(null);
 
 
-    </div>
-  )
+    useEffect(() => {
+        getDataDokumen();
+        return () => {
+            setDataDokumen(null);
+        }
+      }, [])
+
+      function getDataDokumen(){
+        const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=2&per_page=4').then(function (response) {
+      setDataDokumen(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+    }
+
+
+  return (  
+                <>
+                {
+                    (DataDokumen != null) ?
+                    <div className="container-main">
+                        <div className="row">
+                                    <Carousel fade>
+                                    <Carousel.Item>
+                                        <img
+                                        className="baner d-block w-100"
+                                        src=""
+                                        />
+                                        <Carousel.Caption className='carousel'>
+                                        <h3>Dokumen</h3>
+                                        <p>Beranda>Halaman Dokumen</p>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                                <div className="bg container-fluid">
+                                <div className="container">
+                                    <Form className="d-flex mt-5">
+                                    <Form.Control
+                                        type="search"
+                                        placeholder="Search"
+                                        className="me-2"
+                                        aria-label="Search"
+                                    />
+                                    <Button variant="outline-success">Search</Button>
+                                    </Form>
+                            
+                    {
+                        DataDokumen 
+                        && DataDokumen.map((item, index) => {
+                        return (
+                            <div className='col-lg-12'>
+                                <Card className='mt-4'>
+                                    <Card.Body>
+                                    <Card.Title className='sub'>
+                                            {item.title}
+                                    </Card.Title>
+                                    <Card.Text>
+                                            {item.content}
+                                    </Card.Text>
+                                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        )
+                        })
+                    }
+                    </div>
+                </div>
+      </div>: ''
+    }
+  
+  </>
+  );
 }
 
 export default Dokumen;

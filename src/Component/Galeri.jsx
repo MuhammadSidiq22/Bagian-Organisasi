@@ -16,7 +16,7 @@ function Galeri() {
 
     function getGaleri(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
         setDataGaleri(response.data.data.data);
     }).catch(function (error) {
 

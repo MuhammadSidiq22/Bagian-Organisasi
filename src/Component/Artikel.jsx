@@ -17,7 +17,7 @@ function Artikel() {
 
       function getArtikel(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=1&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2&per_page=4').then(function (response) {
         setDataArtikel(response.data.data.data);
     }).catch(function (error) {
 
@@ -55,7 +55,7 @@ function Artikel() {
                                     <Card.Text>
                                             
                                     </Card.Text>
-                                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                    <Button variant="outline-success" href='/artikel/DetailArtikel/${item.id}'>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
                             </div>

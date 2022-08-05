@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
-import '../css/Style.css';
+import '../css/Galeri.css';
 import React from 'react'
 
 function Foto() {
@@ -12,12 +12,10 @@ function Foto() {
             <div className='col-12'>
                 <Carousel fade>
                 <Carousel.Item>
-                    <img
-
-                    className="d-block w-100"
-                    src="https://i.pinimg.com/564x/ac/b9/72/acb972a99cadb2b1b311ae24788cfd6a.jpg"
-                    alt="First slide"
-                    />
+                        <img
+                        className="baner d-block w-100"
+                        src=""
+                        />
                     <Carousel.Caption className='carousel'>
                     <h3>Foto</h3>
                     <p>Beranda>Halaman Foto</p>
@@ -26,6 +24,8 @@ function Foto() {
                 </Carousel>
             </div>
         </div>
+        <div className="bg container-fluid">
+        <div className="container">
         <div className='isi row py-5'>
             <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
                 <Card>
@@ -75,6 +75,8 @@ function Foto() {
                     </Card.Body>
                 </Card>
             </div>
+        </div>
+        </div>
         </div>
      </div>
   )

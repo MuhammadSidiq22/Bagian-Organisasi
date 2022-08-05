@@ -16,7 +16,7 @@ function Berita() {
 
     function getBerita(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
         setDataBerita(response.data.data.data);
     }).catch(function (error) {
 
@@ -54,7 +54,7 @@ function Berita() {
                                 <Card.Text>
                                         {item.content}
                                 </Card.Text>
-                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                <Button variant="outline-success" href='/berita/DetailBerita/${item.id}'>Baca Selengkapnya..</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

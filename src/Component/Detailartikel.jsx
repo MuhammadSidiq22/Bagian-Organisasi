@@ -20,7 +20,7 @@ function Detartikel() {
 
       function getDetartikel(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=7&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2&per_page=4').then(function (response) {
         setDataDetartikel(response.data.data.data);
     }).catch(function (error) {
 
@@ -39,9 +39,8 @@ function Detartikel() {
                                     <Carousel fade>
                                     <Carousel.Item>
                                         <img
-                                        className="d-block w-100"
-                                        src="https://i.pinimg.com/564x/ac/b9/72/acb972a99cadb2b1b311ae24788cfd6a.jpg"
-                                        alt="First slide"
+                                        className="baner d-block w-100"
+                                        src=""
                                         />
                                         <Carousel.Caption className='carousel'>
                                         <h3>Artikel</h3>
@@ -74,7 +73,7 @@ function Detartikel() {
                                     <Card.Text>
                                             {item.content}
                                     </Card.Text>
-                                    <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                    <Button variant="outline-success" href='/artikel/DetailArtikel/${item.id}'>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
                             </div>

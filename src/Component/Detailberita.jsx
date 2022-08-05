@@ -20,7 +20,7 @@ function Detberita() {
 
       function getDetberita(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=6').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=6').then(function (response) {
         setDataDetberita(response.data.data.data);
     }).catch(function (error) {
 
@@ -40,10 +40,8 @@ function Detberita() {
                                     <Carousel fade>
                                     <Carousel.Item>
                                         <img
-
-                                        className="d-block w-100"
-                                        src="https://i.pinimg.com/564x/ac/b9/72/acb972a99cadb2b1b311ae24788cfd6a.jpg"
-                                        alt="First slide"
+                                        className="baner d-block w-100"
+                                        src=""
                                         />
                                         <Carousel.Caption className='carousel'>
                                         <h3>Berita</h3>
