@@ -48,13 +48,13 @@ function Galeri() {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Img width={18} variant="top" src={item.image_file_data} />
                                 <Card.Body>
-                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Title></Card.Title>
                                 <Card.Text>
-                                        {item.content}
+                                        
                                 </Card.Text>
-                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                <Button variant="outline-success">Perbesar</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

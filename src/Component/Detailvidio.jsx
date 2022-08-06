@@ -1,15 +1,39 @@
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import '../css/Style.css';
 import Carousel from 'react-bootstrap/Carousel';
 import '../css/Galeri.css';
-import React from 'react'
+import react, {useState, useEffect, Fragment} from 'react'
 
 function Vidio() {
+    const [DataVidio, setDataVidio] = useState(null);
+
+    useEffect(() => {
+      getVidio();
+      return () => {
+        setDataVidio(null);
+      }
+    }, [])
+
+    function getVidio(){
+        const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
+        setDataVidio(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+    }
+    
+
   return (
-    <div className='isi container-fluid py-5'>
+    <>
+      {
+        (DataVidio != null) ?
+          <div className="container-main mt-5">
             <div className='row'>
-            <div className='col-12'>
                 <Carousel fade>
                 <Carousel.Item>
                         <img
@@ -22,64 +46,37 @@ function Vidio() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>
-            </div>
         </div>
-        <div className="bg container-fluid">
         <div className="container">
-        <div className='isi row py-5'>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                 <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className='col-lg-3 col-md-6 col-sm-12 mt-3'>
-                 <Card>
-                    <Card.Img variant="top" src="https://1.bp.blogspot.com/-mogxB8jFxLQ/YYN_bPWf2WI/AAAAAAAAWc8/JwPzwAiWkPMq3v8goW32r9vtFORuu8kwQCLcBGAsYHQ/s620/informasi-berita.JPG" />
-                    <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="outline-success">Success</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </div>
+        <div className="row">
+                
+        {
+          DataVidio 
+          && DataVidio.map((item, index) => {
+            return (
+
+                        <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
+                            <Card className='mt-4'>
+                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Body>
+                                <Card.Title></Card.Title>
+                                <Card.Text>
+                                        
+                                </Card.Text>
+                                <Button variant="outline-success">Perbesar</Button>{' '}
+                                </Card.Body>
+                            </Card>
+                        </div>
+            )
+          })
+        }
+                </div>
         </div>
-        </div>
-        </div>
-     </div>
-  )
+        </div>: ''
+      }
+    
+    </>
+  );
 }
 
 export default Vidio;

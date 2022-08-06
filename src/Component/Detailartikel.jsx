@@ -8,14 +8,15 @@ import Pagination from 'react-bootstrap/Pagination';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Detartikel() {
-    const [DataDetartikel, setDataDetartikel] = useState(null);
+    const [DataDetartikel, setDataDetartikel] = useState([]);
+    
 
 
     useEffect(() => {
         getDetartikel();
-        return () => {
-            setDataDetartikel(null);
-        }
+        //return () => {
+          //  setDataDetartikel(null);
+        //}
       }, [])
 
       function getDetartikel(){
@@ -29,7 +30,8 @@ function Detartikel() {
     });
     }
 
-
+    console.log(DataDetartikel)
+    console.log('abcd')
   return (  
                 <>
                 {
@@ -69,7 +71,7 @@ function Detartikel() {
                                 <Card className='mt-4'>
                                     <Card.Img variant="top" src={item.image_file_data} />
                                     <Card.Body>
-                                    <Card.Title className='sub'>{item.title}</Card.Title>
+                                    <Card.Title className='sub'>{item.title}{item.id}</Card.Title>
                                     <Card.Text>
                                             {item.content}
                                     </Card.Text>

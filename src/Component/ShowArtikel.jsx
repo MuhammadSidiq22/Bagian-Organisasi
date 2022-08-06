@@ -1,21 +1,24 @@
 import react, {useState, useEffect, Fragment} from 'react';
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
+import DetailArtikel from '../DetailArtikel';
 
 function ShowArtikel() {
-    const [DataShowArtikel, setDataShowArtikel] = useState(null);
+    const [DataShowArtikel, setDataShowArtikel] = useState([]);
     const { id } = useParams();
+
 
     useEffect(() => {
         getShowArtikel();
-        return () => {
-            setDataShowArtikel(null);
-        }
+        //return () => {
+        //    setDataShowArtikel(null);
+        //}
       }, [])
 
       function getShowArtikel(){
         const axios = require('axios');
     axios.get("http://adminmesuji.embuncode.com/api/article/" + id).then(function (response) {
-        setDataShowArtikel(response.data.data.data);
+        setDataShowArtikel(response.data.data);
+        console.log(response.data)
     }).catch(function (error) {
 
     }).then(function () {
@@ -23,10 +26,13 @@ function ShowArtikel() {
     });
     }
     
-
+  console.log(DataShowArtikel)
     return (
         <>
-          {
+        <h1>{id}</h1>
+        <p>{DataShowArtikel.title}</p>
+        <img src={DataShowArtikel.image_file_data}></img>
+          {/* {
             (DataShowArtikel != null) ?
               <div className="container-main mt-5">                    
             {
@@ -48,7 +54,7 @@ function ShowArtikel() {
               })
             }
             </div>: ''
-          }
+          } */}
         
         </>
       );
