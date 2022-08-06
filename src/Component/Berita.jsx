@@ -54,7 +54,7 @@ function Berita() {
                                 <Card.Text>
                                         {item.content}
                                 </Card.Text>
-                                <Button variant="outline-success" href='/berita/DetailBerita/${item.id}'>Baca Selengkapnya..</Button>{' '}
+                                <Button variant="outline-success" href={`/berita/DetailBerita/${item.id}`}>Baca Selengkapnya..</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

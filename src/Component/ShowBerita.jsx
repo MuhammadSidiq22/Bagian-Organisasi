@@ -1,19 +1,19 @@
 import react, {useState, useEffect, Fragment} from 'react';
 import { useParams } from "react-router-dom";
 
-function ShowArtikel() {
-    const [DataShowArtikel, setDataShowArtikel] = useState([]);
+function ShowBerita() {
+    const [DataShowBerita, setDataShowBerita] = useState([]);
     const { id } = useParams();
 
 
     useEffect(() => {
-        getShowArtikel();
+        getShowBerita();
       }, [])
 
-      function getShowArtikel(){
+      function getShowBerita(){
         const axios = require('axios');
-    axios.get("http://adminmesuji.embuncode.com/api/article/" + id).then(function (response) {
-        setDataShowArtikel(response.data.data);
+    axios.get("http://adminmesuji.embuncode.com/api/news/" + id).then(function (response) {
+        setDataShowBerita(response.data.data);
         console.log(response.data)
     }).catch(function (error) {
 
@@ -22,19 +22,19 @@ function ShowArtikel() {
     });
     }
     
-  console.log(DataShowArtikel)
+  console.log(DataShowBerita)
     return (
         <>
         <div className="container py-5 mt-5">
         <div className='text-center'>
         <h4>
-            {DataShowArtikel.title}
+            {DataShowBerita.title}
         </h4>
         <img className='mt-5' src=
-            {DataShowArtikel.image_file_data}>
+            {DataShowBerita.image_file_data}>
         </img>
         <p className='mt-5'>
-            {DataShowArtikel.content}
+            {DataShowBerita.content}
         </p>
       </div>
       </div>        
@@ -42,4 +42,4 @@ function ShowArtikel() {
       );
     }
 
-export default ShowArtikel;
+export default ShowBerita;

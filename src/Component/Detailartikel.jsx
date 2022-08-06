@@ -14,14 +14,11 @@ function Detartikel() {
 
     useEffect(() => {
         getDetartikel();
-        //return () => {
-          //  setDataDetartikel(null);
-        //}
       }, [])
 
       function getDetartikel(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2').then(function (response) {
         setDataDetartikel(response.data.data.data);
     }).catch(function (error) {
 
@@ -30,8 +27,6 @@ function Detartikel() {
     });
     }
 
-    console.log(DataDetartikel)
-    console.log('abcd')
   return (  
                 <>
                 {
@@ -72,10 +67,7 @@ function Detartikel() {
                                     <Card.Img variant="top" src={item.image_file_data} />
                                     <Card.Body>
                                     <Card.Title className='sub'>{item.title}{item.id}</Card.Title>
-                                    <Card.Text>
-                                            {item.content}
-                                    </Card.Text>
-                                    <Button variant="outline-success" href='/artikel/DetailArtikel/${item.id}'>Baca Selengkapnya..</Button>{' '}
+                                    <Button variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
                             </div>

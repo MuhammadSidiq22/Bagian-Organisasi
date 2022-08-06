@@ -16,7 +16,7 @@ function Galeri() {
 
     function getGaleri(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2&per_page=4').then(function (response) {
         setDataGaleri(response.data.data.data);
     }).catch(function (error) {
 
@@ -48,7 +48,7 @@ function Galeri() {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img width={18} variant="top" src={item.image_file_data} />
+                                <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>

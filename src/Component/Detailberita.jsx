@@ -20,7 +20,7 @@ function Detberita() {
 
       function getDetberita(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=6').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2').then(function (response) {
         setDataDetberita(response.data.data.data);
     }).catch(function (error) {
 
@@ -76,7 +76,7 @@ function Detberita() {
                                             <Card.Text>
                                                     {item.content}
                                             </Card.Text>
-                                            <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                            <Button variant="outline-success" href={`/berita/DetailBerita/${item.id}`}>Baca Selengkapnya..</Button>{' '}
                                             </Card.Body>
                                         </Card>
                                     </div>

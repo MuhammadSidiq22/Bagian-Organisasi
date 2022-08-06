@@ -26,7 +26,6 @@ function Artikel() {
     });
     }
     
-    console.log(DataArtikel)
     return (
         <>
           {
@@ -51,7 +50,7 @@ function Artikel() {
                                 <Card className='mt-4'>
                                     <Card.Img variant="top" src={item.image_file_data} />
                                     <Card.Body>
-                                    <Card.Title>{item.title}{item.id}</Card.Title>
+                                    <Card.Title>{item.title}</Card.Title>
                                     <Card.Text>
                                             
                                     </Card.Text>
