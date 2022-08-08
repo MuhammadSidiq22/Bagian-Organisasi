@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
 import Carousel from 'react-bootstrap/Carousel';
 import '../css/Galeri.css';
+import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Vidio() {
@@ -37,8 +38,8 @@ function Vidio() {
                 <Carousel fade>
                 <Carousel.Item>
                         <img
-                        className="baner d-block w-100"
-                        src=""
+                        className="d-block w-100"
+                        src={bg}
                         />
                     <Carousel.Caption className='carousel'>
                     <h3>Vidio</h3>

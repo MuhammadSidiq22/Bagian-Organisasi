@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../css/Detailartikel.css';
 import Pagination from 'react-bootstrap/Pagination';
+import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Detartikel() {
@@ -32,12 +33,11 @@ function Detartikel() {
                 {
                     (DataDetartikel != null) ?
                     <div className="container-main">
-                        <div className="row">
                                     <Carousel fade>
                                     <Carousel.Item>
                                         <img
-                                        className="baner d-block w-100"
-                                        src=""
+                                        className="d-block w-100"
+                                        src={bg}
                                         />
                                         <Carousel.Caption className='carousel'>
                                         <h3>Artikel</h3>
@@ -45,9 +45,9 @@ function Detartikel() {
                                         </Carousel.Caption>
                                     </Carousel.Item>
                                     </Carousel>
-                                </div>
                                 <div className="bg container-fluid">
                                 <div className="container">
+                                <div className="row">
                                     <Form className="d-flex mt-5">
                                     <Form.Control
                                         type="search"
@@ -57,16 +57,15 @@ function Detartikel() {
                                     />
                                     <Button variant="outline-success">Search</Button>
                                     </Form>
-                            
                     {
                         DataDetartikel 
                         && DataDetartikel.map((item, index) => {
                         return (
-                            <div className='col-lg-12'>
-                                <Card className='mt-4'>
+                            <div className='col-md-6 col-sm-12'>
+                                <Card className='mt-5'>
                                     <Card.Img variant="top" src={item.image_file_data} />
                                     <Card.Body>
-                                    <Card.Title className='sub'>{item.title}{item.id}</Card.Title>
+                                    <Card.Title>{item.title}{item.id}</Card.Title>
                                     <Button variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
@@ -85,6 +84,7 @@ function Detartikel() {
                         </Pagination>
                         </div>
                     </div>
+                </div>
                 </div>
       </div>: ''
     }

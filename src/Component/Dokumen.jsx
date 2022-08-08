@@ -4,7 +4,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../css/Dokumen.css';
+import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
+
 
 function Dokumen() {
     const [DataDokumen, setDataDokumen] = useState(null);
@@ -19,7 +21,7 @@ function Dokumen() {
 
       function getDataDokumen(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=2&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=2').then(function (response) {
       setDataDokumen(response.data.data.data);
     }).catch(function (error) {
 
@@ -38,8 +40,8 @@ function Dokumen() {
                                     <Carousel fade>
                                     <Carousel.Item>
                                         <img
-                                        className="baner d-block w-100"
-                                        src=""
+                                        className="d-block w-100"
+                                        src={bg}
                                         />
                                         <Carousel.Caption className='carousel'>
                                         <h3>Dokumen</h3>
@@ -71,7 +73,7 @@ function Dokumen() {
                                             {item.title}
                                     </Card.Title>
                                     <Card.Text>
-                                            {item.content}
+                                            {item.dokumen_file_data}
                                     </Card.Text>
                                     <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>

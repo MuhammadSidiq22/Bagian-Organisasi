@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Halamanstatis() {
@@ -40,8 +41,7 @@ function Halamanstatis() {
                                         <img
 
                                         className="d-block w-100"
-                                        src="https://i.pinimg.com/564x/ac/b9/72/acb972a99cadb2b1b311ae24788cfd6a.jpg"
-                                        alt="First slide"
+                                        src={bg}
                                         />
                                         <Carousel.Caption className='carousel'>
                                         <h3>HalamanStatis</h3>
