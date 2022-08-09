@@ -39,12 +39,12 @@ function DetailFoto() {
                 
         {
           DataDetailFoto 
-          && DataDetailFoto.map((index, item) => {
+          && DataDetailFoto.map((item) => {
             return (
 
                         <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={Item.image_gallery_item[0].image_file_data} />
+                                <Card.Img variant="top" src={item.image_gallery_item[0].image_file_data} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>
