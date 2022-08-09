@@ -2,9 +2,9 @@ import react, {useState, useEffect, Fragment} from 'react';
 import { useParams } from "react-router-dom";
 
 function ShowFoto() {
-    const [DataShowFoto, setDataShowFoto] = useState([]);
-    const { id } = useParams();
-
+    const [DataShowFoto, setDataShowFoto] = useState(null);
+    const { slug } = useParams();
+    console.log('slug :>> ', slug);
 
     useEffect(() => {
         getShowFoto();
@@ -12,7 +12,7 @@ function ShowFoto() {
 
       function getShowFoto(){
         const axios = require('axios');
-    axios.get("http://adminmesuji.embuncode.com/api/article/" + id).then(function (response) {
+    axios.get("http://adminmesuji.embuncode.com/api/image-gallery/" + slug).then(function (response) {
         setDataShowFoto(response.data.data);
         console.log(response.data)
     }).catch(function (error) {
@@ -25,16 +25,22 @@ function ShowFoto() {
   console.log(DataShowFoto)
     return (
         <>
-        <div className='text-center'>
+        { console.log('DataShowFoto', DataShowFoto) }
+        {
+            (DataShowFoto != null) ? 
+            <>
+            <div className='text-center'>
             <img className='mt-5'
-                src={DataShowFoto.image_gallery_item[0].image_file_data}>
+                src={DataShowFoto.description_gallery}>
             </img>
         </div>
         <div>
-            <p className='mt-5'>
-                {DataShowFoto.description}
+            <p className='mt-5'>test
+                {DataShowFoto[0].description_gallery}
             </p>
-        </div>        
+        </div></>  : ''
+        }
+               
         </>
       );
     }
