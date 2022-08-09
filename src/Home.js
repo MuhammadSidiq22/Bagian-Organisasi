@@ -2,9 +2,10 @@ import Navigasi from './Component/Navbar';
 import Caurosel from './Component/Carousel';
 import Berita from './Component/Berita';
 import Artikel from './Component/Artikel';
-import Galeri from './Component/Galeri';
+import Profil from './Component/Profil';
+import Vidio from './Component/Vidio';
+import Foto from './Component/Foto';
 import Footer from './Component/Footer';
-import Poto from './Component/Profil';
 import React from "react";
 
 
@@ -26,10 +27,13 @@ const Home = () => {
                 <Artikel />
           </div>
           <div>
-                <Poto />
+                <Profil />
           </div>
           <div className='mb-5'>
-                <Galeri />
+                <Foto />
+          </div>
+          <div className='mb-5'>
+                <Vidio />
           </div>
         </div>
         <Footer />

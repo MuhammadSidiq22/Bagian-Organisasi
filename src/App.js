@@ -8,6 +8,8 @@ import Vidio from "./Vidio.js";
 import HalamanStatis from "./HalamanStatis.js";
 import DetailArtikel from "./DetailArtikel.js";
 import DetailBerita from "./DetailBerita.js";
+import DetailDokumen from "./DetailDokumen.js";
+import DetailFoto from "./DetailFoto.js";
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/HalamanStatis" element={<HalamanStatis />} />
         <Route path='/artikel/DetailArtikel/:id' element={<DetailArtikel />} />
         <Route path='/berita/DetailBerita/:id' element={<DetailBerita />} />
+        <Route path='/dokumen/DetailDokumen/:slug' element={<DetailDokumen />} />
+        <Route path='/foto/DetailFoto/:slug' element={<DetailFoto />} />
       </Routes>
       
     </>

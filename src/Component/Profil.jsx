@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Figure from 'react-bootstrap/Figure';
 import '../css/Profil.css';
 
-function Poto() {
+function Profil() {
   return (
     <div className='bg container-fluid text-center mt-5'>
       <div className='container'>
@@ -27,4 +27,4 @@ function Poto() {
   );
 }
 
-export default Poto;
+export default Profil;

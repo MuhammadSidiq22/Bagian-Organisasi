@@ -4,20 +4,20 @@ import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
 import react, {useState, useEffect, Fragment} from 'react'
 
-function Galeri() {
-    const [DataGaleri, setDataGaleri] = useState(null);
+function Foto() {
+    const [DataFoto, setDataFoto] = useState(null);
 
     useEffect(() => {
-      getGaleri();
+      getFoto();
       return () => {
-        setDataGaleri(null);
+        setDataFoto(null);
       }
     }, [])
 
-    function getGaleri(){
+    function getFoto(){
         const axios = require('axios');
     axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2&per_page=4').then(function (response) {
-        setDataGaleri(response.data.data.data);
+      setDataFoto(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -29,7 +29,7 @@ function Galeri() {
   return (
     <>
       {
-        (DataGaleri != null) ?
+        (DataFoto != null) ?
           <div className="container-main mt-5">
             <div className="container">
                 <div className="row">
@@ -43,18 +43,18 @@ function Galeri() {
                 </div>
                 
         {
-          DataGaleri 
-          && DataGaleri.map((item, index) => {
+          DataFoto 
+          && DataFoto.map((index, item) => {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Img variant="top" src={item.image_gallery_item[0].image_file_data} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>
-                                        
+                                       {item.description} 
                                 </Card.Text>
-                                <Button variant="outline-success">Perbesar</Button>{' '}
+                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.id}`}>Perbesar</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>
@@ -70,4 +70,4 @@ function Galeri() {
   );
 }
 
-export default Galeri;
+export default Foto;

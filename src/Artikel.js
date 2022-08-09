@@ -4,7 +4,7 @@ import Footer from './Component/Footer';
 import Detartikel from './Component/Detailartikel';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Berita = () => {
+const Artikel = () => {
   return (
     <>
         <div className="container-fluid py-5">
@@ -17,4 +17,4 @@ const Berita = () => {
     </>
   );
 };
-export default Berita;
+export default Artikel;

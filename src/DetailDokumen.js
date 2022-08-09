@@ -1,22 +1,21 @@
 import React from "react";
 import Navigasi from './Component/Navbar';
 import Footer from './Component/Footer';
-import Dokumen from "./Component/Dokumen";
+import ShowDokumen from './Component/ShowDokumen';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Berita = () => {
+const DetailDokumen = () => {
+  
   return (
     <>
         <div className="container-fluid py-5">
-            <Navigasi />
+          <Navigasi />
         </div>
         <div>
-            <Dokumen />    
+          <ShowDokumen />
         </div>
-        <div>
-        </div>
-            <Footer />
+        <Footer />
     </>
   );
 };
-export default Berita;
+export default DetailDokumen;

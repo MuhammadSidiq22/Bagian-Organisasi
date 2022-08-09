@@ -2,25 +2,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
-import Carousel from 'react-bootstrap/Carousel';
-import '../css/Galeri.css';
-import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
 
-function Foto() {
-    const [DataFoto, setDataFoto] = useState(null);
+function DetailFoto() {
+    const [DataDetailFoto, setDataDetailFoto] = useState(null);
 
     useEffect(() => {
-      getFoto();
+      getDetailFoto();
       return () => {
-        setDataFoto(null);
+        setDataDetailFoto(null);
       }
     }, [])
 
-    function getFoto(){
+    function getDetailFoto(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
-        setDataFoto(response.data.data.data);
+    axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2').then(function (response) {
+      setDataDetailFoto(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -32,39 +29,28 @@ function Foto() {
   return (
     <>
       {
-        (DataFoto != null) ?
+        (DataDetailFoto != null) ?
           <div className="container-main mt-5">
-            <div className='row'>
-                <Carousel fade>
-                <Carousel.Item>
-                        <img
-                        className="d-block w-100"
-                        src={bg}
-                        />
-                    <Carousel.Caption className='carousel'>
-                    <h3>Foto</h3>
-                    <p>Beranda>Halaman Foto</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                </Carousel>
-        </div>
-        <div className="container">
+              <div className='baner text-center'>
+                  <h1>Galery Foto</h1>
+              </div>
+        <div className="container-fluid bg">
         <div className="row">
                 
         {
-          DataFoto 
-          && DataFoto.map((item, index) => {
+          DataDetailFoto 
+          && DataDetailFoto.map((index, item) => {
             return (
 
                         <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Img variant="top" src={Item.image_gallery_item[0].image_file_data} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>
-                                        
+                                      {item.description}
                                 </Card.Text>
-                                <Button variant="outline-success">Perbesar</Button>{' '}
+                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.id}`}>Perbesar</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>
@@ -80,4 +66,4 @@ function Foto() {
   );
 }
 
-export default Foto;
+export default DetailFoto;

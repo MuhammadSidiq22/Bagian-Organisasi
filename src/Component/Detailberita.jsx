@@ -3,9 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import '../css/Detailberita.css';
+import '../css/Style.css';
 import Pagination from 'react-bootstrap/Pagination';
-import bg from '../asset/banner/2.jpg';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Detberita() {
@@ -35,23 +34,14 @@ function Detberita() {
     <>
     {
                     (DataDetberita != null) ?
-                        <div className="container-main mt-5">
-                                    <Carousel fade>
-                                    <Carousel.Item>
-                                        <img
-                                        className="d-block w-100"
-                                        src={bg}
-                                        />
-                                        <Carousel.Caption className='carousel'>
-                                        <h3>Berita</h3>
-                                        <p>Beranda>Halaman Berita</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                    </Carousel>
+                        <div className="container-main">
+                        <div className='baner'>
+                            <h1>Berita</h1>
+                        </div>
                             <div className="bg container-fluid">
                             <div className="container">
                                 <div className="row">
-                                        <Form className="d-flex mt-5">
+                                        <Form className="d-flex">
                                         <Form.Control
                                             type="search"
                                             placeholder="Search"
