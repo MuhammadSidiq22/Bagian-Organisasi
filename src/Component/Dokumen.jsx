@@ -35,6 +35,7 @@ function Dokumen() {
                     <div className="container-main">
                         <div className='baner text-center'>
                             <h1>Dokumen</h1>
+                            <hr />
                         </div>
                                 <div className="bg container-fluid">
                                 <div className="container">
@@ -42,18 +43,18 @@ function Dokumen() {
                             
                     {
                         DataDokumen 
-                        && DataDokumen.map((index) => {
+                        && DataDokumen.map((item, index) => {
                         return (
                             <div className='col-lg-12'>
                                 <Card className='mt-4'>
                                     <Card.Body>
                                     <Card.Title>
-                                    {index.dokumen_item[0].dokumen_file_name}
+                                    {item.dokumen_item[0].dokumen_file_name}
                                     </Card.Title>
                                     <Card.Text>
-                                    {index.description}
+                                    {item.description}
                                     </Card.Text>
-                                    <Button variant="outline-success" href={`/dokumen/DetailDokumen/${index.slug}`}>Baca Selengkapnya..</Button>{' '}
+                                    <Button variant="outline-success" href={`/dokumen/DetailDokumen/${item.slug}`}>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
                             </div>

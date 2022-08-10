@@ -6,7 +6,7 @@ import '../css/Nav.css';
 
 function Navigasi() {
   return (
-    <Navbar fixed="top" bg="light" expand="lg" className="bg-nav justify-content-end flex-grow-1 pe-3">
+    <Navbar fixed="top" bg="light" expand="lg" className="justify-content-end flex-grow-1 pe-3">
       <div className='nav container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <img 

@@ -8,3 +8,12 @@
     background-color:seagreen;
     padding: 200px 200px;
 }
+
+.show-dokumen{
+    height: 600px;
+    width: 100%;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

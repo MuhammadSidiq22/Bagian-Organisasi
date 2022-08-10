@@ -15,7 +15,7 @@ function Halamanstatis() {
 
       function getDatastatis(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=6').then(function (response) {
+    axios.get('').then(function (response) {
         setDatastatis(response.data.data.data);
     }).catch(function (error) {
 

@@ -13,7 +13,3 @@
 .effect:hover:not(.active) {
   background-color: whitesmoke;
 }
-
-.bg-nav{
-  background-color: #F5FFFA;
-}

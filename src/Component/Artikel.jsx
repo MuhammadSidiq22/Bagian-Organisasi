@@ -33,10 +33,10 @@ function Artikel() {
               <div className="container-main mt-5">
                 <div className="container">
                     <div className="row">
-                    <div className='sub col-lg-6  col-md-6 col-sm-6'>
+                    <div className='col-lg-6  col-md-6 col-sm-6'>
                         Artikel Terbaru__
                     </div>
-                    <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+                    <div className='col-lg-6  col-md-6 col-sm-6 text-end'>
                     <Button variant="outline-success" size="sm" href='/Artikel'>
                     >>Lihat semua
                     </Button>
@@ -46,7 +46,7 @@ function Artikel() {
               DataArtikel 
               && DataArtikel.map((item, index) => {
                 return (
-                            <div className=' col-md-6 col-sm-12'>
+                            <div className='col-md-6 col-sm-12'>
                                 <Card className='mt-4'>
                                     <Card.Img variant="top" src={item.image_file_data} />
                                     <Card.Body>

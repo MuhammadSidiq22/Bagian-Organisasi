@@ -39,7 +39,7 @@ function DetailFoto() {
                 
         {
           DataDetailFoto 
-          && DataDetailFoto.map((item) => {
+          && DataDetailFoto.map((item, index) => {
             return (
 
                         <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
@@ -50,7 +50,7 @@ function DetailFoto() {
                                 <Card.Text>
                                       {item.description}
                                 </Card.Text>
-                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.id}`}>Perbesar</Button>{' '}
+                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Perbesar</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

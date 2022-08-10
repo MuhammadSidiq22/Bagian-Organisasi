@@ -39,16 +39,16 @@ function Vidio() {
                 
         {
           DataVidio 
-          && DataVidio.map((index) => {
+          && DataVidio.map((item, index) => {
             return (
 
                         <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={index.image_gallery_item[0].thumbnail_url} />
+                                <Card.Img variant="top" src={item.image_gallery_item[0].thumbnail_url} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>
-                                    {index.description}
+                                    {item.description}
                                 </Card.Text>
                                 <Button variant="outline-success">Perbesar</Button>{' '}
                                 </Card.Body>

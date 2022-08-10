@@ -26,19 +26,19 @@ function ShowArtikel() {
     return (
         <>
         <div className="container py-5 mt-5">
-        <div>
-        <h1>
-            {DataShowArtikel.title}
-        </h1>
-        <div className='text-center'>
-        <img className='mt-5'
-        src={DataShowArtikel.image_file_data}>
-        </img>
-        </div>
-        <p className='mt-5'>
+          <div>
+            <h1>
+                {DataShowArtikel.title}
+            </h1>
+          </div>
+          <div className='text-center'>
+            <img className='mt-5'
+                src={DataShowArtikel.image_file_data}>
+            </img>
+          </div>
+          <p className='mt-5'>
             {DataShowArtikel.content}
         </p>
-      </div>
       </div>        
         </>
       );
