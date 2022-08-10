@@ -17,7 +17,8 @@ function Foto() {
     function getFoto(){
         const axios = require('axios');
     axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2&per_page=4').then(function (response) {
-      setDataFoto(response.data.data.data);
+    console.log('response :>> ', response);  
+    setDataFoto(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -28,6 +29,7 @@ function Foto() {
 
   return (
     <>
+    { console.log('DataFoto', DataFoto) }
       {
         (DataFoto != null) ?
           <div className="container-main mt-5">
@@ -45,6 +47,7 @@ function Foto() {
         {
           DataFoto 
           && DataFoto.map((item, index) => {
+            { console.log('item', item) }
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
@@ -54,7 +57,7 @@ function Foto() {
                                 <Card.Text>
                                        {item.description} 
                                 </Card.Text>
-                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Perbesar</Button>{' '}
+                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Selengkapnya</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

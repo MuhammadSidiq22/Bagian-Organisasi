@@ -1,11 +1,11 @@
-import Navigasi from './Component/Navbar';
-import Caurosel from './Component/Carousel';
-import Berita from './Component/Berita';
-import Artikel from './Component/Artikel';
-import Profil from './Component/Profil';
-import Vidio from './Component/Vidio';
-import Foto from './Component/Foto';
-import Footer from './Component/Footer';
+import Navigasi from '../Component/Navbar';
+import Caurosel from '../Component/Carousel';
+import Berita from '../Component/Berita';
+import Artikel from '../Component/Artikel';
+import Profil from '../Component/Profil';
+import Vidio from '../Component/Vidio';
+import Foto from '../Component/Foto';
+import Footer from '../Component/Footer';
 import React from "react";
 
 

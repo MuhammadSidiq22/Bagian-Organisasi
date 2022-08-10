@@ -1,6 +1,6 @@
-import Navigasi from './Component/Navbar';
-import Footer from './Component/Footer';
-import Halamanstatis from './Component/HalamanStatis';
+import Navigasi from '../Component/Navbar';
+import Footer from '../Component/Footer';
+import Halamanstatis from '../Component/HalamanStatis';
 import React from "react";
 
 

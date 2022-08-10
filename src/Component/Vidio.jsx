@@ -54,7 +54,7 @@ function Vidio() {
                                 <Card.Text>
                                        {index.description} 
                                 </Card.Text>
-                                <Button variant="outline-success">Perbesar</Button>{' '}
+                                <Button variant="outline-success">Selengkapnya</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

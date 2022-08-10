@@ -1,6 +1,6 @@
-import '../css/Dokumen.css';
 import react, { useState, useEffect, Fragment } from 'react';
 import { useParams } from "react-router-dom";
+import '../css/Dokumen.css';
 
 function ShowDokumen() {
     const [DataShowDokumen, setDataShowDokumen] = useState(null);
@@ -35,7 +35,7 @@ function ShowDokumen() {
                         </article>
                     </div>
                     <div className='show-dokumen'>
-                        <iframe 
+                        <iframe
                             src={"data:application/pdf;base64," + DataShowDokumen[0].dokumen_file_data}
                             frameBorder="0"
                             title={DataShowDokumen[0].dokumen_file_data}

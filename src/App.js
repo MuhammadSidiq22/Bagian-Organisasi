@@ -1,15 +1,15 @@
 import React from "react";
-import Home from "./Home.js";
-import Berita from "./Berita.js";
-import Artikel from "./Artikel.js";
-import Dokumen from "./Dokumen.js";
-import Foto from "./Foto.js";
-import Vidio from "./Vidio.js";
-import HalamanStatis from "./HalamanStatis.js";
-import DetailArtikel from "./DetailArtikel.js";
-import DetailBerita from "./DetailBerita.js";
-import DetailDokumen from "./DetailDokumen.js";
-import DetailFoto from "./DetailFoto.js";
+import Home from "./Page/Home.js";
+import Berita from "./Page/Berita.js";
+import Artikel from "./Page/Artikel.js";
+import Dokumen from "./Page/Dokumen.js";
+import Foto from "./Page/Foto.js";
+import Vidio from "./Page/Vidio.js";
+import HalamanStatis from "./Page/HalamanStatis.js";
+import DetailArtikel from "./Page/DetailArtikel.js";
+import DetailBerita from "./Page/DetailBerita.js";
+import DetailDokumen from "./Page/DetailDokumen.js";
+import DetailFoto from "./Page/DetailFoto.js";
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (

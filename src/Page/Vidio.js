@@ -1,7 +1,7 @@
 import React from "react";
-import Navigasi from './Component/Navbar';
-import Footer from './Component/Footer';
-import Vidio from "./Component/Detailvidio";
+import Navigasi from '../Component/Navbar';
+import Footer from '../Component/Footer';
+import Vidio from "../Component/Detailvidio";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Berita = () => {

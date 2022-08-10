@@ -1,10 +1,10 @@
 import React from "react";
-import Navigasi from './Component/Navbar';
-import Footer from './Component/Footer';
-import ShowDokumen from './Component/ShowDokumen';
+import Navigasi from '../Component/Navbar';
+import Footer from '../Component/Footer';
+import ShowArtikel from '../Component/ShowArtikel';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const DetailDokumen = () => {
+const DetailArtikel = () => {
   
   return (
     <>
@@ -12,10 +12,10 @@ const DetailDokumen = () => {
           <Navigasi />
         </div>
         <div>
-          <ShowDokumen />
+          <ShowArtikel />
         </div>
         <Footer />
     </>
   );
 };
-export default DetailDokumen;
+export default DetailArtikel;

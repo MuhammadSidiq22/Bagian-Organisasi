@@ -33,7 +33,7 @@ function Artikel() {
               <div className="container-main mt-5">
                 <div className="container">
                     <div className="row">
-                    <div className='col-lg-6  col-md-6 col-sm-6'>
+                    <div className='font col-lg-6  col-md-6 col-sm-6'>
                         Artikel Terbaru__
                     </div>
                     <div className='col-lg-6  col-md-6 col-sm-6 text-end'>

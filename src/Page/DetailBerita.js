@@ -1,20 +1,21 @@
 import React from "react";
-import Navigasi from './Component/Navbar';
-import Footer from './Component/Footer';
-import ShowFoto from './Component/ShowFoto';
+import Navigasi from '../Component/Navbar';
+import Footer from '../Component/Footer';
+import ShowBerita from '../Component/ShowBerita';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const DetailFoto = () => {
+const DetailBerita = () => {
+  
   return (
     <>
         <div className="container-fluid py-5">
           <Navigasi />
         </div>
         <div>
-            <ShowFoto />
+          <ShowBerita />
         </div>
         <Footer />
     </>
   );
 };
-export default DetailFoto;
+export default DetailBerita;

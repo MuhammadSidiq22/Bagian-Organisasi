@@ -1,6 +1,6 @@
-import '../css/DetailFoto.css';
 import react, {useState, useEffect, Fragment} from 'react';
 import { useParams } from "react-router-dom";
+import '../css/DetailFoto.css';
 
 function ShowFoto() {
     const [DataShowFoto, setDataShowFoto] = useState(null);
@@ -31,16 +31,15 @@ function ShowFoto() {
             (DataShowFoto != null) ? 
             <>
             <div className='img text-center mt-5'>
-                <img
-                    src={DataShowFoto[0].image_file_data}>
-                </img>
-            </div>
-            <div>
-                <p className='mt-5 mb-5 text-center'>
-                    {DataShowFoto[0].description_gallery}
-                </p>
-            </div>
-            </>  : ''
+            <img
+                src={DataShowFoto[0].image_file_data}>
+            </img>
+        </div>
+        <div className='text-center'>
+            <p className='mt-5'>test
+                {DataShowFoto[0].description_gallery}
+            </p>
+        </div></>  : ''
         }
                
         </>
