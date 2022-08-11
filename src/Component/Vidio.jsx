@@ -16,7 +16,8 @@ function Vidio() {
 
     function getVidio(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/video-gallery?instansi_id=2').then(function (response) {
+        axios.get(process.env.REACT_APP_VIDIO)
+        .then(function (response) {
         setDataVidio(response.data.data.data);
     }).catch(function (error) {
 
@@ -33,8 +34,8 @@ function Vidio() {
           <div className="bg container-main mt-5">
             <div className="container">
                 <div className="row">
-                <div className='sub col-lg-6  col-md-6 col-sm-6'>
-                    Galeri Vidio__
+                <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
+                    Galeri Vidio
                 </div>
                 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
                 <Button variant="outline-success" size="sm" href='/Vidio'>
@@ -46,16 +47,14 @@ function Vidio() {
           DataVidio 
           && DataVidio.map((item, index) => {
             return (
-                        <div className='col-lg-3 col-md-6 col-sm-12'>
+                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_gallery_item[0].thumbnail_url} />
-                                <Card.Body>
-                                <Card.Title></Card.Title>
-                                <Card.Text>
-                                       {item.description} 
-                                </Card.Text>
-                                <Button variant="outline-success"  href={`/vidio/DetailVidio/${item.slug}`}>Selengkapnya</Button>{' '}
-                                </Card.Body>
+                                <Card.Img 
+                                  variant="top" 
+                                  width="400"
+                                  height="200"
+                                  src={item.image_gallery_item[0].thumbnail_url} />
+                                <Button variant="outline-success"  href={`/vidio/DetailVidio/${item.slug}`}>Buka</Button>{' '}
                             </Card>
                         </div>
             )

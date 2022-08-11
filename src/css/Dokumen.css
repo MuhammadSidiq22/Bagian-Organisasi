@@ -10,9 +10,8 @@
 }
 
 .show-dokumen{
-    height: 600px;
+    height: 800px;
     width: 100%;
-    background-color: aliceblue;
     justify-content: center;
     align-items: center;
     display: flex;

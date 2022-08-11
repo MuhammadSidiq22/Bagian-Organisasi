@@ -16,8 +16,9 @@ function DetailFoto() {
 
     function getDetailFoto(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2').then(function (response) {
-      setDataDetailFoto(response.data.data.data);
+        axios.get(process.env.REACT_APP_FOTO_PAGE)
+        .then(function (response) {
+        setDataDetailFoto(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -31,7 +32,7 @@ function DetailFoto() {
       {
         (DataDetailFoto != null) ?
           <div className="container-main mt-5">
-              <div className='baner text-center'>
+              <div className='font-judul baner text-center'>
                   <h1>Galery Foto</h1>
               </div>
         <div className="container-fluid bg">
@@ -42,16 +43,14 @@ function DetailFoto() {
           && DataDetailFoto.map((item, index) => {
             return (
 
-                        <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
+                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_gallery_item[0].image_file_data} />
-                                <Card.Body>
-                                <Card.Title></Card.Title>
-                                <Card.Text>
-                                      {item.description}
-                                </Card.Text>
+                                <Card.Img 
+                                variant="top" 
+                                width="400"
+                                height="200"
+                                src={item.image_gallery_item[0].image_file_data} />
                                 <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Selengkapnya</Button>{' '}
-                                </Card.Body>
                             </Card>
                         </div>
             )

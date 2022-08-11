@@ -16,9 +16,10 @@ function Foto() {
 
     function getFoto(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/image-gallery?instansi_id=2&per_page=4').then(function (response) {
-    console.log('response :>> ', response);  
-    setDataFoto(response.data.data.data);
+        axios.get(process.env.REACT_APP_FOTO)
+        .then(function (response) {
+        console.log('response :>> ', response);  
+        setDataFoto(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -35,8 +36,8 @@ function Foto() {
           <div className="container-main mt-5">
             <div className="container">
                 <div className="row">
-                <div className='sub col-lg-6  col-md-6 col-sm-6'>
-                    Galeri Foto__
+                <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
+                    Galeri Foto
                 </div>
                 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
                 <Button variant="outline-success" size="sm" href='/Foto'>
@@ -49,16 +50,14 @@ function Foto() {
           && DataFoto.map((item, index) => {
             { console.log('item', item) }
             return (
-                        <div className='col-lg-3 col-md-6 col-sm-12'>
+                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_gallery_item[0].image_file_data} />
-                                <Card.Body>
-                                <Card.Title></Card.Title>
-                                <Card.Text>
-                                       {item.description} 
-                                </Card.Text>
-                                <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Selengkapnya</Button>{' '}
-                                </Card.Body>
+                                <Card.Img 
+                                  variant="top" 
+                                  width="400"
+                                  height="200"
+                                  src={item.image_gallery_item[0].image_file_data}/>
+                                  <Button variant="outline-success" href={`/foto/DetailFoto/${item.slug}`}>Buka</Button>{' '}
                             </Card>
                         </div>
             )

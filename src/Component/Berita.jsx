@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import '../css/Berita.css';
+import '../css/Style.css';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Berita() {
@@ -16,7 +16,8 @@ function Berita() {
 
     function getBerita(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=2&per_page=4').then(function (response) {
+        axios.get(process.env.REACT_APP_BERITA)
+        .then(function (response) {
         setDataBerita(response.data.data.data);
     }).catch(function (error) {
 
@@ -33,8 +34,8 @@ function Berita() {
           <div className="bg container-main">
             <div className="container">
                 <div className="row">
-                <div className='font col-lg-6  col-md-6 col-sm-6'>
-                    Berita Terbaru__
+                <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
+                    Berita Terbaru
                 </div>
                 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
                 <Button variant="outline-success" size="sm" href='/Berita'>
@@ -46,9 +47,14 @@ function Berita() {
           DataBerita 
           && DataBerita.map((item, index) => {
             return (
-                        <div className='col-lg-3 col-md-6 col-sm-12'>
+                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" className='image-berita' src={item.image_file_data} />
+                                <Card.Img 
+                                variant="top" 
+                                className='image-berita'
+                                width="400"
+                                height="200" 
+                                src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>

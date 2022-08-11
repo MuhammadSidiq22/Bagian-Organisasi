@@ -16,7 +16,8 @@ function Vidio() {
 
     function getVidio(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/video-gallery?instansi_id=2').then(function (response) {
+        axios.get(process.env.REACT_APP_VIDIO_PAGE)
+        .then(function (response) {
         setDataVidio(response.data.data.data);
     }).catch(function (error) {
 
@@ -31,7 +32,7 @@ function Vidio() {
       {
         (DataVidio != null) ?
           <div className="container-main mt-5">
-            <div className='baner text-center'>
+            <div className='font-judul baner text-center'>
                 <h1>Galery Vidio</h1>
             </div>
         <div className="bg container-fluid">
@@ -42,16 +43,14 @@ function Vidio() {
           && DataVidio.map((item, index) => {
             return (
 
-                        <div className='col-lg-3 col-md-6 col-sm-12 py-5'>
+                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={item.image_gallery_item[0].thumbnail_url} />
-                                <Card.Body>
-                                <Card.Title></Card.Title>
-                                <Card.Text>
-                                    {item.description}
-                                </Card.Text>
+                                <Card.Img 
+                                variant="top" 
+                                width="400"
+                                height="200"
+                                src={item.image_gallery_item[0].thumbnail_url} />
                                 <Button variant="outline-success" href={`/vidio/DetailVidio/${item.slug}`}>Selengkapnya</Button>{' '}
-                                </Card.Body>
                             </Card>
                         </div>
             )

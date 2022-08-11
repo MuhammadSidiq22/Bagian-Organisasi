@@ -17,7 +17,7 @@ function Detartikel() {
 
       function getDetartikel(){
         const axios = require('axios');
-        axios.get(process.env.REACT_APP_DETAIL_ARTIKEL)
+        axios.get(process.env.REACT_APP_ARTIKEL_PAGE)
         .then(function (response) {
         setDataDetartikel(response.data.data.data);
     }).catch(function (error) {
@@ -32,13 +32,13 @@ function Detartikel() {
                 {
                     (DataDetartikel != null) ?
                     <div className="container-main">
-                        <div className='baner'>
+                        <div className='font-judul baner'>
                             <h1>Artikel</h1>
                         </div>
                                 <div className="bg container-fluid">
                                 <div className="container">
                                 <div className="row">
-                                    <Form className="d-flex">
+                                    <Form className="font-judul d-flex">
                                     <Form.Control
                                         type="search"
                                         placeholder="Search"
@@ -51,9 +51,13 @@ function Detartikel() {
                         DataDetartikel 
                         && DataDetartikel.map((item, index) => {
                         return (
-                            <div className='col-md-6 col-sm-12'>
+                            <div className='font-isi col-md-6 col-sm-12'>
                                 <Card className='mt-5'>
-                                    <Card.Img variant="top" src={item.image_file_data} />
+                                    <Card.Img 
+                                    variant="top" 
+                                    width="400"
+                                    height="350"
+                                    src={item.image_file_data} />
                                     <Card.Body>
                                     <Card.Title>{item.title}{item.id}</Card.Title>
                                     <Button variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}

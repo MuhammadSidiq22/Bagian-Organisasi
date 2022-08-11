@@ -18,8 +18,9 @@ function Dokumen() {
 
       function getDataDokumen(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=2').then(function (response) {
-      setDataDokumen(response.data.data.data);
+        axios.get(process.env.REACT_APP_DOKUMEN_PAGE)
+        .then(function (response) {
+        setDataDokumen(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -33,19 +34,19 @@ function Dokumen() {
                 {
                     (DataDokumen != null) ?
                     <div className="container-main">
-                        <div className='baner text-center'>
+                        <div className='font-judul baner text-center'>
                             <h1>Dokumen</h1>
                             <hr />
                         </div>
                                 <div className="bg container-fluid">
                                 <div className="container">
-                                    <h2>Dokumen</h2>
+                                    <h2 className='font-judul'>Dokumen</h2>
                             
                     {
                         DataDokumen 
                         && DataDokumen.map((item, index) => {
                         return (
-                            <div className='col-lg-12'>
+                            <div className='font-isi col-lg-12'>
                                 <Card className='mt-4'>
                                     <Card.Body>
                                     <Card.Title>

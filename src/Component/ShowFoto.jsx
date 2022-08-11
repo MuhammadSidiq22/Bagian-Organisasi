@@ -1,6 +1,6 @@
 import react, {useState, useEffect, Fragment} from 'react';
 import { useParams } from "react-router-dom";
-import '../css/DetailFoto.css';
+import '../css/Style.css';
 
 function ShowFoto() {
     const [DataShowFoto, setDataShowFoto] = useState(null);
@@ -13,7 +13,8 @@ function ShowFoto() {
 
       function getShowFoto(){
         const axios = require('axios');
-    axios.get("http://adminmesuji.embuncode.com/api/image-gallery/" + slug).then(function (response) {
+        axios.get(process.env.REACT_APP_SHOW_FOTO + slug)
+        .then(function (response) {
         setDataShowFoto(response.data.data);
         console.log(response.data)
     }).catch(function (error) {
@@ -30,18 +31,21 @@ function ShowFoto() {
         {
             (DataShowFoto != null) ? 
             <>
-            <div className='img text-center mt-5 mb-5'>
-            <img
-                width="860"
-                height="615"
-                src={DataShowFoto[0].image_file_data}>
-            </img>
+            <div className="container">
+                <div className='show-galeri text-center py-5 mt-5'>
+                    <img
+                        width="100%"
+                        height="100%"
+                        src={DataShowFoto[0].image_file_data}>
+                    </img>
+                </div>
+                <div className='font-isi text-center'>
+                    <p>
+                        {DataShowFoto[0].description_gallery}
+                    </p>
+                </div>
             </div>
-            <div className='text-center mt-5'>
-                <p>
-                    {DataShowFoto[0].description_gallery}
-                </p>
-            </div></>  : ''
+            </>  : ''
         }
                
         </>

@@ -1,6 +1,7 @@
 import react, { useState, useEffect, Fragment } from 'react';
 import { useParams } from "react-router-dom";
 import '../css/Dokumen.css';
+import '../css/Style.css';
 
 function ShowDokumen() {
     const [DataShowDokumen, setDataShowDokumen] = useState(null);
@@ -13,7 +14,8 @@ function ShowDokumen() {
 
     function getShowDokumen() {
         const axios = require('axios');
-        axios.get("http://adminmesuji.embuncode.com/api/dokumen/" + slug).then(function (response) {
+        axios.get(process.env.REACT_APP_SHOW_DOKUMEN  + slug)
+        .then(function (response) {
             setDataShowDokumen(response.data.data);
             console.log(response.data)
         }).catch(function (error) {
@@ -29,10 +31,10 @@ function ShowDokumen() {
             {
                 (DataShowDokumen != null) ?
                 <div className="container py-5 mt-5">
-                    <div>
-                        <article>
+                    <div className='font-judul'>
+                        <h4>
                             {DataShowDokumen.description_dokumen}
-                        </article>
+                        </h4>
                     </div>
                     <div className='show-dokumen'>
                         <iframe
