@@ -50,7 +50,7 @@ function Vidio() {
                                 <Card.Text>
                                     {item.description}
                                 </Card.Text>
-                                <Button variant="outline-success">Selengkapnya</Button>{' '}
+                                <Button variant="outline-success" href={`/vidio/DetailVidio/${item.slug}`}>Selengkapnya</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

@@ -17,7 +17,8 @@ function Detartikel() {
 
       function getDetartikel(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2').then(function (response) {
+        axios.get(process.env.REACT_APP_DETAIL_ARTIKEL)
+        .then(function (response) {
         setDataDetartikel(response.data.data.data);
     }).catch(function (error) {
 

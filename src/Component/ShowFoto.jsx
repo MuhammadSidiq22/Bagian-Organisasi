@@ -30,16 +30,18 @@ function ShowFoto() {
         {
             (DataShowFoto != null) ? 
             <>
-            <div className='img text-center mt-5'>
+            <div className='img text-center mt-5 mb-5'>
             <img
+                width="860"
+                height="615"
                 src={DataShowFoto[0].image_file_data}>
             </img>
-        </div>
-        <div className='text-center'>
-            <p className='mt-5'>test
-                {DataShowFoto[0].description_gallery}
-            </p>
-        </div></>  : ''
+            </div>
+            <div className='text-center mt-5'>
+                <p>
+                    {DataShowFoto[0].description_gallery}
+                </p>
+            </div></>  : ''
         }
                
         </>

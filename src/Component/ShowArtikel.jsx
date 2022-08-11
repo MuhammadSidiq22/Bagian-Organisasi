@@ -12,7 +12,8 @@ function ShowArtikel() {
 
       function getShowArtikel(){
         const axios = require('axios');
-    axios.get("http://adminmesuji.embuncode.com/api/article/" + id).then(function (response) {
+      axios.get(process.env.REACT_APP_DETAIL_ARTIKEL + id)
+      .then(function (response) {
         setDataShowArtikel(response.data.data);
         console.log(response.data)
     }).catch(function (error) {

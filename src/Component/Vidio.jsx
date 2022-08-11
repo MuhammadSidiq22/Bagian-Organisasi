@@ -16,7 +16,7 @@ function Vidio() {
 
     function getVidio(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/video-gallery?instansi_id=2&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/video-gallery?instansi_id=2').then(function (response) {
         setDataVidio(response.data.data.data);
     }).catch(function (error) {
 
@@ -44,17 +44,17 @@ function Vidio() {
                 
         {
           DataVidio 
-          && DataVidio.map((index) => {
+          && DataVidio.map((item, index) => {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
-                                <Card.Img variant="top" src={index.image_gallery_item[0].thumbnail_url} />
+                                <Card.Img variant="top" src={item.image_gallery_item[0].thumbnail_url} />
                                 <Card.Body>
                                 <Card.Title></Card.Title>
                                 <Card.Text>
-                                       {index.description} 
+                                       {item.description} 
                                 </Card.Text>
-                                <Button variant="outline-success">Selengkapnya</Button>{' '}
+                                <Button variant="outline-success"  href={`/vidio/DetailVidio/${item.slug}`}>Selengkapnya</Button>{' '}
                                 </Card.Body>
                             </Card>
                         </div>

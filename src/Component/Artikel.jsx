@@ -17,7 +17,8 @@ function Artikel() {
 
       function getArtikel(){
         const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=2&per_page=4').then(function (response) {
+        axios.get(process.env.REACT_APP_ARTIKEL)
+        .then(function (response) {
         setDataArtikel(response.data.data.data);
     }).catch(function (error) {
 

@@ -10,6 +10,7 @@ import DetailArtikel from "./Page/DetailArtikel.js";
 import DetailBerita from "./Page/DetailBerita.js";
 import DetailDokumen from "./Page/DetailDokumen.js";
 import DetailFoto from "./Page/DetailFoto.js";
+import DetailVidio from "./Page/DetailVidio.js";
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/berita/DetailBerita/:id' element={<DetailBerita />} />
         <Route path='/dokumen/DetailDokumen/:slug' element={<DetailDokumen />} />
         <Route path='/foto/DetailFoto/:slug' element={<DetailFoto />} />
+        <Route path='/vidio/DetailVidio/:slug' element={<DetailVidio />} />
       </Routes>
       
     </>
