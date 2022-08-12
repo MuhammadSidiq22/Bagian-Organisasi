@@ -1,5 +1,5 @@
 import Navigasi from '../Component/Navbar';
-import Caurosel from '../Component/Carousel';
+import Banner from '../Component/Banner';
 import Berita from '../Component/Berita';
 import Artikel from '../Component/Artikel';
 import Profil from '../Component/Profil';
@@ -13,14 +13,14 @@ const Home = () => {
   return (
     <>
       <div>
-          <div>
+          <div className='mb-5'>
                 <Navigasi />
           </div>
           <br></br>
-          <div className='mt-5'>
-                <Caurosel />
+          <div className='py-5'>
+                <Banner />
           </div>
-          <div>
+          <div className='mt-5'>
                 <Berita />
           </div>
           <div>
@@ -36,7 +36,7 @@ const Home = () => {
                 <Vidio />
           </div>
         </div>
-        <Footer />
+                <Footer />
     </>
   );
 };

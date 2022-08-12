@@ -37,6 +37,9 @@ function Vidio() {
             </div>
         <div className="bg container-fluid">
         <div className="row">
+        <div className='font-judul'>
+            Galeri Vidio
+          </div>
                 
         {
           DataVidio 

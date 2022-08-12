@@ -10,48 +10,67 @@ function Foot() {
     <div className='Foot main-footer'>
       <div className='container py-5'>
         <div className='row'>
-        <div className='col-lg-4 col-md-6 col-sm-12 mt-3'>
-            <h4>Artikel Terkait</h4>
+        <div className=' col-lg-6 col-sm-12 mt-3'>
+            <h4>Tentang Kami</h4>
             <hr />
             <h1 className='list-unstyled'></h1>
-            <p>reader will be distracted by the readable content of a page when ...</p>
-            <p>Various versions have evolved over the years, sometimes by accide...</p>
-            <p>necessitatibus saepe eveniet ut et voluptates repudiandae sint et...</p>
-            <p>f classical Latin literature from 45 BC, making it over 2000 yea...</p>
+            <p>Alamat Instansi</p>
+            <p>Jl. Yang Benar Dan Lurus</p>
+            <p>Kabupaten Kali</p>
+            <p>Provinsi Lampung</p>
           </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 mt-3'>
-            <h4>Berita Terkait</h4>
-            <hr />
-            <h1 className='list-unstyled'></h1>
-            <p>reader will be distracted by the readable content of a page when ...</p>
-            <p>Various versions have evolved over the years, sometimes by accide...</p>
-            <p>necessitatibus saepe eveniet ut et voluptates repudiandae sint et...</p>
-            <p>f classical Latin literature from 45 BC, making it over 2000 yea...</p>
-          </div>
-          <div className='col-lg-4 col-md-6-text-center col-sm-12 mt-3'>
+          <div className='col-lg-6 col-sm-12 mt-3'>
             <h4>
             Hubungi Kami :
             </h4>
             <hr />
-            <p>
-              <img src={bg}
-              width={40}></img>&nbsp;
-              Facebook Kami
+            <p >
+              <a 
+              className='font-foot' 
+              href=''
+              >
+                <img 
+                src={bg}
+                width={40}>
+                </img>&nbsp;
+                Facebook Kami
+              </a>
             </p>
             <p>
-              <img src={bg1}
-              width={40}></img>&nbsp;
-              Whatsapp kami
+              <a
+              className='font-foot'
+              href=''
+              >
+                <img 
+                src={bg1}
+                width={40}>
+                </img>&nbsp;
+                Whatsapp kami
+              </a>
             </p>
             <p>
-              <img src={bg2}
-              width={40}></img>&nbsp;
-              Instagram Kami
+              <a
+              className='font-foot'
+              href=''
+              >
+                <img 
+                src={bg2}
+                width={40}>
+                </img>&nbsp;
+                Instagram Kami
+              </a>
             </p>
             <p>
-              <img src={bg3}
-              width={40}></img>&nbsp;
-              Youtube Kami
+              <a
+              className='font-foot'
+              href=''
+              >
+                <img 
+                src={bg3}
+                width={40}>
+                </img>&nbsp;
+                Youtube Kami
+              </a>
             </p>
           </div>
         </div>

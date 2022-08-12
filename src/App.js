@@ -5,12 +5,12 @@ import Artikel from "./Page/Artikel.js";
 import Dokumen from "./Page/Dokumen.js";
 import Foto from "./Page/Foto.js";
 import Vidio from "./Page/Vidio.js";
-import HalamanStatis from "./Page/HalamanStatis.js";
 import DetailArtikel from "./Page/DetailArtikel.js";
 import DetailBerita from "./Page/DetailBerita.js";
 import DetailDokumen from "./Page/DetailDokumen.js";
 import DetailFoto from "./Page/DetailFoto.js";
 import DetailVidio from "./Page/DetailVidio.js";
+import HalamanStatis from "./Page/HalamanStatis.js";
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (

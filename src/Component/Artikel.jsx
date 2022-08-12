@@ -58,11 +58,11 @@ function Artikel() {
                                     <Card.Title>
                                       {item.title}
                                     </Card.Title>
-                                    <Button className='text-end' variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}
+                                      <Button className='text-end' variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}
                                     </Card.Body>
                                 </Card>
                             </div>
-                )
+                      )
               })
             }
                     </div>

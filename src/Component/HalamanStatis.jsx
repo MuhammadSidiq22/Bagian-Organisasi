@@ -3,20 +3,21 @@ import '../css/Style.css';
 import react, {useState, useEffect, Fragment} from 'react'
 
 function Halamanstatis() {
-    const [Datastatis, setDatastatis] = useState(null);
+    const [DataHalamanstatis, setDataHalamanstatis] = useState([]);
 
 
     useEffect(() => {
-        getDatastatis();
+        getDataHalamanstatis();
         return () => {
-            setDatastatis(null);
+            setDataHalamanstatis(null);
         }
       }, [])
 
-      function getDatastatis(){
+      function getDataHalamanstatis(){
         const axios = require('axios');
-    axios.get('').then(function (response) {
-        setDatastatis(response.data.data.data);
+        axios.get(process.env.REACT_APP_STATIS_PAGE)
+        .then(function (response) {
+            setDataHalamanstatis(response.data.data.data);
     }).catch(function (error) {
 
     }).then(function () {
@@ -24,35 +25,22 @@ function Halamanstatis() {
     });
     }
 
-
+console.log(DataHalamanstatis)
   return (  
-            <>
-            {
-                    (Datastatis != null) ?
-                        <div className="container-main mt-5">
-                            <div className='baner text-center'>
-                                <h1>Informasi Lainnya</h1>
-                            </div>
-                            <div className="bg container-fluid">
-                            <div className="container">
-                                    <div className="row">
-                    {
-                        Datastatis 
-                        && Datastatis.map((item, index) => {
-                        return (     
-                                        <div>
-                                            <h1>Halaman Contoh</h1>
-                                        </div>
-                        )
-                        })
-                    }
-                        </div>
-                    </div>
+    <>
+    <div className="container-fluid">
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                        {DataHalamanstatis.title}
+                    <p>
+                        {DataHalamanstatis.intro}
+                    </p>
                 </div>
-      </div>: ''
-    }
-  
-  </>
+            </div>
+        </div>
+    </div>
+    </>
   );
 }
 

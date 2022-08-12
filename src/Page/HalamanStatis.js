@@ -14,7 +14,7 @@ const HalamanStatis = () => {
           <div>
              <Halamanstatis/>   
           </div>
-          </div>
+      </div>
             <Footer />
     </>
   );

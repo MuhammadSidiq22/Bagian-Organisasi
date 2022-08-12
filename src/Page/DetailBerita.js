@@ -1,7 +1,9 @@
 import React from "react";
 import Navigasi from '../Component/Navbar';
-import Footer from '../Component/Footer';
 import ShowBerita from '../Component/ShowBerita';
+import Footer from '../Component/Footer';
+import SidebarBerita from '../Side/SidebarBerita';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const DetailBerita = () => {
@@ -9,12 +11,21 @@ const DetailBerita = () => {
   return (
     <>
         <div className="container-fluid py-5">
-          <Navigasi />
+          <div className="container">
+            <div>
+              <Navigasi />
+            </div>
+            <div className="row">
+              <div className="col-lg-8 py-5">
+                <ShowBerita />
+              </div>
+              <div className="col-lg-4 py-5">
+                <SidebarBerita />
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <ShowBerita />
-        </div>
-        <Footer />
+              <Footer />
     </>
   );
 };

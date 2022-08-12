@@ -37,6 +37,9 @@ function DetailFoto() {
               </div>
         <div className="container-fluid bg">
         <div className="row">
+          <div className='font-judul'>
+            Galeri Foto
+          </div>
                 
         {
           DataDetailFoto 
