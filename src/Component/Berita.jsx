@@ -31,7 +31,7 @@ function Berita() {
     <>
       {
         (DataBerita != null) ?
-          <div className="bg container-main">
+          <div className="container-main">
             <div className="container">
                 <div className="row">
                 <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
@@ -47,7 +47,7 @@ function Berita() {
           DataBerita 
           && DataBerita.map((item, index) => {
             return (
-                        <div className='font-isi col-lg-3 col-md-6 col-sm-12'>
+                        <div className='font-isi col-lg-4 col-md-6 col-sm-12'>
                             <Card className='mt-4'>
                                 <Card.Img 
                                 variant="top" 

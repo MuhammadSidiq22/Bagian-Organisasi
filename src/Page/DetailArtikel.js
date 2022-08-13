@@ -2,7 +2,7 @@ import React from "react";
 import Navigasi from '../Component/Navbar';
 import ShowArtikel from '../Component/ShowArtikel';
 import Footer from '../Component/Footer';
-import Sidebar from '../Side/SidebarArtikel';
+import SidebarArtikel from '../Side/SidebarArtikel';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,7 +20,7 @@ const DetailArtikel = () => {
                 <ShowArtikel />
               </div>
               <div className="col-lg-4 py-5">
-                <Sidebar />
+                <SidebarArtikel />
               </div>
             </div>
           </div>

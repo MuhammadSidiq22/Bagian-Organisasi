@@ -4,7 +4,7 @@ import '../css/Style.css';
 
 function Profil() {
   return (
-    <div className='bg container-fluid text-center mt-5'>
+    <div className='container-fluid text-center'>
       <div className='container'>
         <div className="row">
           <div className='font-judul'>

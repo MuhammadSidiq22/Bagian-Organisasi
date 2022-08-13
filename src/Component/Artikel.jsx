@@ -31,7 +31,7 @@ function Artikel() {
         <>
           {
             (DataArtikel != null) ?
-              <div className="container-main mt-5">
+              <div className="container-main">
                 <div className="container">
                     <div className="row">
                     <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
