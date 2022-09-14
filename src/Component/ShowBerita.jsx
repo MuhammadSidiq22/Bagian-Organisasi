@@ -32,7 +32,7 @@ function ShowBerita() {
           <div className="container">
             <div className="row">
               <div className="col-10">
-                <div className='font-judul'>
+                <div className='font-title-show'>
                   <h1>
                       {DataShowBerita.title}
                   </h1>
@@ -42,7 +42,7 @@ function ShowBerita() {
                           src={DataShowBerita.image_file_data}>
                       </img>
                     </div>
-                      <p className='font-isi mt-5 mb-5'>
+                      <p className='font-content-show mt-5 mb-5'>
                         {DataShowBerita.content}
                       </p>
                   </div>

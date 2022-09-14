@@ -1,110 +1,153 @@
-.baner-show{
-    height: 500px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.bg-banner{
-    background-color: rgba(0, 0, 0, .06);
+/* banner home */
+.baner-show {
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.font-banner{
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    line-height: 22.5px;
-    text-decoration: none;
+.bg-banner {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.font-banner {
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  line-height: 22.5px;
+  text-decoration: none;
+  color: white;
+}
+
+/* font universal */
+.font-content {
+  font-family: "Lato", sans-serif;
+}
+
+.font-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+}
+
+/* font-sidebar */
+.font-title-sidebar {
+  font-size: medium;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+.font-sidebar {
+  font-size: small;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+/* font show */
+.font-title-show {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.font-content-show {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+
+/* Card Bagian Home */
+.card-home {
+  border-radius: 20px 0px 20px 0px;
+  background: #f8f9fa;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.img-home {
+  border: 0px;
+}
+.img-home:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.5s;
+}
+
+
+/* Tombol */
+.Button{
+    background-color: white;
+    color: black;
+    outline-color: white;
+}
+.Button:hover{
+    background-color: #B1D7B4;
     color: white;
 }
 
 
-.card{
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-    
-    cursor: pointer;
-}
-.card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-    transition: transform 0.6s;
 
+
+
+.fix-size {
+  width: "400px";
+  height: "200px";
 }
 
-.fix-size{
-    width :"400px";
-    height :"200px";
+.cardprof {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
-.cardprof{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
+.baner {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(
+      farthest-side at bottom left,
+      rgba(18, 235, 29, 0.616),
+      rgb(4, 77, 34)
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(18, 235, 29, 0.616),
+      #2d6ccc 400px
+    );
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: aliceblue;
+  text-align: center;
+  padding: 200px 200px;
 }
 
-.baner{
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    background:
-        radial-gradient(farthest-side at bottom left,
-            rgba(18, 235, 29, 0.616),
-            rgb(4, 77, 34)),
-        radial-gradient(farthest-corner at bottom right,
-            rgba(18, 235, 29, 0.616),
-            #2d6ccc 400px);
-    width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: aliceblue;
-    text-align: center;
-    padding: 200px 200px;
-
+.bg {
+  background-color: #f5fffa;
 }
 
-.font-sidebar{
-    font-family: 'League Spartan', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
+.bg1 {
+  background-color: white;
+  padding: 0px 100px;
 }
 
-
-
-
-
-
-
-.font-judul{
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    line-height: 22.5px;
-}
-
-.font-isi{
-    font-family: 'League Spartan', sans-serif;
-    font-size: 25px;
-}
-
-
-.bg{
-    background-color: #F5FFFA;
-    padding: 100px 100px;
-}
-
-.bg1{
-    background-color: white;
-    padding: 100px 100px;
-}
-
-.show-galeri{
-    height: 800px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.show-galeri {
+  height: 800px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

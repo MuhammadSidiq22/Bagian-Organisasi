@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
-import react, {useState, useEffect, Fragment} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 
 function Artikel() {
     const [DataArtikel, setDataArtikel] = useState(null);
@@ -34,22 +34,19 @@ function Artikel() {
               <div className="container-main">
                 <div className="container">
                     <div className="row">
-                    <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
+                    <div className='font-title col-lg-6  col-md-6 col-sm-6'>
                         Artikel Terbaru
                     </div>
-                    <div className='col-lg-6  col-md-6 col-sm-6 text-end'>
-                    <Button variant="outline-success" size="sm" href='/Artikel'>
-                    >>Lihat semua
-                    </Button>
-                    </div>
+                    <hr/>
                     
             {
               DataArtikel 
               && DataArtikel.map((item, index) => {
                 return (
-                            <div className='font-isi col-md-6 col-sm-12'>
-                                <Card className='mt-4'>
-                                    <Card.Img 
+                            <div className='font-content col-md-6 col-sm-12'>
+                                <Card className='card-home mb-2'>
+                                    <Card.Img
+                                    className='img-home' 
                                     variant="top" 
                                     width="400"
                                     height="350"
@@ -58,7 +55,7 @@ function Artikel() {
                                     <Card.Title>
                                       {item.title}
                                     </Card.Title>
-                                      <Button className='text-end' variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>{' '}
+                                      <Button className='Button' variant="outline-success" href={`/artikel/DetailArtikel/${item.id}`}>Baca Selengkapnya..</Button>
                                     </Card.Body>
                                 </Card>
                             </div>

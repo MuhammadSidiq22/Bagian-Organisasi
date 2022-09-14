@@ -35,8 +35,10 @@ function SidebarArtikel() {
                     <div className="row">
                         <Card>
                             <Card.Body>
-                                <Card.Title className='font-judul'>
+                                <Card.Title>
+                                  <a className='font-title-sidebar' href='/Artikel'>
                                     Artikel Terbaru
+                                  </a>
                                 </Card.Title>
                             </Card.Body>
                         </Card>
@@ -45,7 +47,7 @@ function SidebarArtikel() {
               DataSidebarArtikel 
               && DataSidebarArtikel.map((item, index) => {
                 return (
-                            <div className='font-isi col-md-12 col-sm-12'>
+                            <div className='col-md-12 col-sm-12'>
                                 <Card className='mt-2'>
                                     <Card.Body>
                                     <Card.Title>

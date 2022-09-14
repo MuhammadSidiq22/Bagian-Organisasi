@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
 .nav{
-    font-family: 'Sintony', sans-serif;
-    font-size: larger;
+  font-family: 'Libre Baskerville', serif;
+    font-size: medium;
     font-weight: bold;
-    padding: 14px 16px;
 }
 
 .effect{
@@ -12,4 +14,5 @@
 
 .effect:hover:not(.active) {
   background-color: whitesmoke;
+  cursor: pointer;
 }

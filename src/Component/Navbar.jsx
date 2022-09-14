@@ -11,8 +11,8 @@ function Navigasi() {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <img 
         src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png'
-         width={70}
-         height={90}>
+         width={60}
+         height={80}>
         </img>
 
         <Navbar.Collapse id="basic-navbar-nav justify-content-end">

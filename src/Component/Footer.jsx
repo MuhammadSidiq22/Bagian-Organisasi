@@ -7,22 +7,21 @@ import bg3 from '../asset/logo/youtube.png';
 
 function Foot() {
   return (
-    <div className='Foot main-footer'>
-      <div className='container py-5'>
+    <div className='Foot font-foot main-footer'>
+      <div className='container py-2'>
         <div className='row'>
         <div className=' col-lg-6 col-sm-12 mt-3'>
             <h4>Tentang Kami</h4>
             <hr />
             <h1 className='list-unstyled'></h1>
-            <p>Alamat Instansi</p>
-            <p>Jl. Yang Benar Dan Lurus</p>
-            <p>Kabupaten Kali</p>
-            <p>Provinsi Lampung</p>
+            <p>
+              Bagian Organisasi merupakan kantor dinas yang bekerja untuk perizinan, pengawasan, hingga pengembangan seluruh organisasi yang ada di kabupaten Tulang Bawang
+            </p>
           </div>
           <div className='col-lg-6 col-sm-12 mt-3'>
-            <h4>
+            <h5>
             Hubungi Kami :
-            </h4>
+            </h5>
             <hr />
             <p >
               <a 
@@ -78,7 +77,7 @@ function Foot() {
       <div className='container'>
       <hr />
           <div className='row'>
-            <p className='col text-center py-5'>
+            <p className='col text-center py-1'>
               &copy;{new Date().getFullYear()} Bagian Organisasi Tulang Bawang.
             </p>
           </div>

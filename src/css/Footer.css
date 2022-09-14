@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
 .Foot{
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -9,6 +12,8 @@
 }
 
 .font-foot{
+    font-size: small;
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: white;
 }

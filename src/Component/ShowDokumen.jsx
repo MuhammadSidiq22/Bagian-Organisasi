@@ -31,7 +31,7 @@ function ShowDokumen() {
             {
                 (DataShowDokumen != null) ?
                 <div className="container py-5 mt-5">
-                    <div className='font-judul'>
+                    <div className='font-title-show'>
                         <h4>
                             {DataShowDokumen.description_dokumen}
                         </h4>

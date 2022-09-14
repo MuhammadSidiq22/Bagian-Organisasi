@@ -35,13 +35,13 @@ function Detberita() {
     {
                     (DataDetberita != null) ?
                         <div className="container-main">
-                        <div className='font-judul baner'>
+                        <div className='font-title baner'>
                             <h1>Berita</h1>
                         </div>
                             <div className="bg container-fluid">
                             <div className="container">
                                 <div className="row">
-                                        <Form className="font-judul d-flex">
+                                        <Form className="font-title d-flex">
                                         <Form.Control
                                             type="search"
                                             placeholder="Search"
@@ -54,7 +54,7 @@ function Detberita() {
                         DataDetberita 
                         && DataDetberita.map((item, index) => {
                         return (                        
-                                    <div className='font-isi col-md-6 col-sm-12'>
+                                    <div className='font-content col-md-6 col-sm-12'>
                                         <Card className='mt-4'>
                                             <Card.Img 
                                             variant="top" 

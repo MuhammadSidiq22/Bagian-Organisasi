@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/Style.css';
-import react, {useState, useEffect, Fragment} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 
 function Berita() {
     const [DataBerita, setDataBerita] = useState(null);
@@ -34,24 +34,20 @@ function Berita() {
           <div className="container-main">
             <div className="container">
                 <div className="row">
-                <div className='font-judul col-lg-6  col-md-6 col-sm-6'>
-                    Berita Terbaru
+                <div className='font-title col-lg-6  col-md-6 col-sm-6'>
+                     Berita Terbaru
                 </div>
-                <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
-                <Button variant="outline-success" size="sm" href='/Berita'>
-                >>Lihat semua
-                </Button>
-                </div>
+                <hr/>
                 
         {
           DataBerita 
           && DataBerita.map((item, index) => {
             return (
-                        <div className='font-isi col-lg-4 col-md-6 col-sm-12'>
-                            <Card className='mt-4'>
+                        <div className='font-content col-lg-4 col-md-6 col-sm-12 mt-2'>
+                            <Card className='card-home'>
                                 <Card.Img 
                                 variant="top" 
-                                className='image-berita'
+                                className='img-home'
                                 width="400"
                                 height="200" 
                                 src={item.image_file_data} />
@@ -60,7 +56,7 @@ function Berita() {
                                 <Card.Text>
                                         {item.content}
                                 </Card.Text>
-                                <Button variant="outline-success" href={`/berita/DetailBerita/${item.id}`}>Baca Selengkapnya..</Button>{' '}
+                                <Button className='Button' variant="outline-success" href={`/berita/DetailBerita/${item.id}`}>Baca Selengkapnya..</Button>
                                 </Card.Body>
                             </Card>
                         </div>

@@ -39,7 +39,7 @@ function ShowFoto() {
                         src={DataShowFoto[0].image_file_data}>
                     </img>
                 </div>
-                <div className='font-isi text-center'>
+                <div className='font-content-show text-center'>
                     <p>
                         {DataShowFoto[0].description_gallery}
                     </p>

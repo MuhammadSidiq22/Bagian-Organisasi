@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import '../css/Style.css';
-import react, {useState, useEffect, Fragment} from 'react'
+import react, {useState, useEffect} from 'react'
 
 function Banner() {
     const [DataBanner, setDataBanner] = useState(null);
@@ -30,7 +30,7 @@ function Banner() {
     <>
       {
         (DataBanner != null) ?
-        <Carousel fade className='baner-show mb-5 mt-5'>
+        <Carousel fade className='baner-show'>
         {
           DataBanner 
           && DataBanner.map((item, index) => {
@@ -39,7 +39,7 @@ function Banner() {
                     <img 
                     className="d-block w-100"
                     src={item.image_file_data}
-                    style={{ width: 500, height: 900 }}
+                    style={{ width: 500, height: 700 }}
                     >
                     </img>
                     <Carousel.Caption className='bg-banner'>

@@ -32,7 +32,7 @@ function ShowVidio() {
             (DataShowVidio != null) ? 
             <>
             <div className="container">
-              <div className='font-judul text-center mt-5'>
+              <div className='font-title-show text-center mt-5'>
                   <h1>
                   {DataShowVidio[0].description_gallery}
                   </h1>
