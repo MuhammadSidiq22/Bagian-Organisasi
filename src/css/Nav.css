@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 
-
-.nav{
-  font-family: 'Libre Baskerville', serif;
-    font-size: medium;
-    font-weight: bold;
+.nav {
+  font-family: "Libre Baskerville", serif;
+  font-size: medium;
+  font-weight: bolder;
 }
 
-.effect{
-    display: block;
-    text-decoration: none;
+.effect {
+  display: block;
+  text-decoration: none;
 }
 
 .effect:hover:not(.active) {
-  background-color: whitesmoke;
+  font-weight: bold;
   cursor: pointer;
+  color: black;
 }
